@@ -7,6 +7,7 @@ export default function Footer() {
     { name: 'Services', href: '/services' },
     { name: 'Process', href: '/process' },
     { name: 'About', href: '/about' },
+    { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
   ];
 
