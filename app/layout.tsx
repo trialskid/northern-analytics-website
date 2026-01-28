@@ -6,7 +6,10 @@ import Footer from "@/components/Footer";
 import Schema from "@/components/Schema";
 import Script from "next/script";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://northern-analytics.com'),
@@ -46,9 +49,9 @@ export default function RootLayout({
       <head>
         <Schema />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} tracking-tight`}>
         <Header />
-        <main className="min-h-screen">
+        <main>
           {children}
         </main>
         <Footer />

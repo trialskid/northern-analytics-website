@@ -18,9 +18,7 @@ export default function Contact() {
       const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
         method: 'POST',
         body: formData,
-        headers: {
-          Accept: 'application/json',
-        },
+        headers: { Accept: 'application/json' },
       });
 
       if (response.ok) {
@@ -30,7 +28,7 @@ export default function Contact() {
         setFormStatus('error');
         setErrorMessage('Something went wrong. Please try again or email us directly.');
       }
-    } catch (error) {
+    } catch {
       setFormStatus('error');
       setErrorMessage('Network error. Please check your connection and try again.');
     }
@@ -38,131 +36,73 @@ export default function Contact() {
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-navy-900 via-navy-800 to-navy-700 text-white py-24 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(59,130,246,0.3),transparent_50%)]" />
-        </div>
-
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              Let&apos;s Talk About Your Project
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-200 font-light">
-              Book a 30-minute consultation and receive a high-level ROI estimate
-            </p>
-          </div>
+      {/* Hero */}
+      <section className="bg-black text-white pt-32 pb-20 md:pt-44 md:pb-28">
+        <div className="mx-auto max-w-[980px] px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl sm:text-6xl md:text-[72px] font-bold leading-[1.05] tracking-[-0.03em] mb-6">
+            Get in <span className="gradient-text">touch.</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-apple-gray max-w-2xl mx-auto leading-relaxed font-light">
+            Book a 30-minute consultation and receive a high-level ROI estimate.
+          </p>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-24 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-16">
-            {/* Contact Form */}
-            <div className="bg-white p-10 rounded-2xl shadow-sm border border-gray-100">
-              <h2 className="text-3xl font-bold text-navy-900 mb-8">
-                Send Us a Message
+      {/* Contact */}
+      <section className="bg-apple-black section-divider py-24 md:py-36">
+        <div className="mx-auto max-w-[980px] px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-16 md:gap-20">
+            {/* Form */}
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold text-apple-light tracking-[-0.02em] mb-8">
+                Send us a message
               </h2>
 
               {formStatus === 'success' && (
-                <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-                  <p className="text-green-800 font-semibold">
-                    Thank you for your message!
-                  </p>
-                  <p className="text-green-700 text-sm mt-1">
-                    We&apos;ll get back to you within 24 hours.
-                  </p>
+                <div className="mb-8 p-5 bg-green-500/10 border border-green-500/20 rounded-2xl">
+                  <p className="text-green-400 font-medium">Thank you for your message!</p>
+                  <p className="text-green-400/70 text-sm mt-1">We&apos;ll get back to you within 24 hours.</p>
                 </div>
               )}
 
               {formStatus === 'error' && (
-                <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
-                  <p className="text-red-800 font-semibold">Error</p>
-                  <p className="text-red-700 text-sm mt-1">{errorMessage}</p>
+                <div className="mb-8 p-5 bg-red-500/10 border border-red-500/20 rounded-2xl">
+                  <p className="text-red-400 font-medium">Error</p>
+                  <p className="text-red-400/70 text-sm mt-1">{errorMessage}</p>
                 </div>
               )}
 
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-base font-semibold text-gray-700 mb-2"
-                  >
-                    Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-blue-500 focus:border-accent-blue-500 transition-all text-base"
-                    disabled={formStatus === 'submitting'}
-                  />
-                </div>
+              <form onSubmit={handleSubmit} className="space-y-5">
+                {[
+                  { id: 'name', label: 'Name', type: 'text', required: true },
+                  { id: 'email', label: 'Email', type: 'email', required: true },
+                  { id: 'company', label: 'Company', type: 'text', required: false },
+                  { id: 'phone', label: 'Phone', type: 'tel', required: false },
+                ].map((field) => (
+                  <div key={field.id}>
+                    <label htmlFor={field.id} className="block text-sm font-medium text-apple-gray mb-2">
+                      {field.label}{field.required ? ' *' : ''}
+                    </label>
+                    <input
+                      type={field.type}
+                      id={field.id}
+                      name={field.id}
+                      required={field.required}
+                      disabled={formStatus === 'submitting'}
+                      className="w-full px-4 py-3 bg-[#161617] border border-white/[0.08] rounded-xl text-apple-light placeholder-apple-gray/50 focus:outline-none focus:border-apple-blue/50 focus:ring-1 focus:ring-apple-blue/50 transition-all text-base disabled:opacity-50"
+                    />
+                  </div>
+                ))}
 
                 <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-base font-semibold text-gray-700 mb-2"
-                  >
-                    Email *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-blue-500 focus:border-accent-blue-500 transition-all text-base"
-                    disabled={formStatus === 'submitting'}
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="company"
-                    className="block text-base font-semibold text-gray-700 mb-2"
-                  >
-                    Company
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-blue-500 focus:border-accent-blue-500 transition-all text-base"
-                    disabled={formStatus === 'submitting'}
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="phone"
-                    className="block text-base font-semibold text-gray-700 mb-2"
-                  >
-                    Phone
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-blue-500 focus:border-accent-blue-500 transition-all text-base"
-                    disabled={formStatus === 'submitting'}
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="service"
-                    className="block text-base font-semibold text-gray-700 mb-2"
-                  >
+                  <label htmlFor="service" className="block text-sm font-medium text-apple-gray mb-2">
                     Service Interested In
                   </label>
                   <select
                     id="service"
                     name="service"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-blue-500 focus:border-accent-blue-500 transition-all text-base bg-white"
                     disabled={formStatus === 'submitting'}
+                    className="w-full px-4 py-3 bg-[#161617] border border-white/[0.08] rounded-xl text-apple-light focus:outline-none focus:border-apple-blue/50 focus:ring-1 focus:ring-apple-blue/50 transition-all text-base disabled:opacity-50 appearance-none"
                   >
                     <option value="">Select a service</option>
                     <option value="process-automation">Process Automation</option>
@@ -175,161 +115,81 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-base font-semibold text-gray-700 mb-2"
-                  >
+                  <label htmlFor="message" className="block text-sm font-medium text-apple-gray mb-2">
                     Message *
                   </label>
                   <textarea
                     id="message"
                     name="message"
                     required
-                    rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-blue-500 focus:border-accent-blue-500 transition-all text-base resize-none"
+                    rows={5}
                     disabled={formStatus === 'submitting'}
-                  ></textarea>
+                    className="w-full px-4 py-3 bg-[#161617] border border-white/[0.08] rounded-xl text-apple-light placeholder-apple-gray/50 focus:outline-none focus:border-apple-blue/50 focus:ring-1 focus:ring-apple-blue/50 transition-all text-base resize-none disabled:opacity-50"
+                  />
                 </div>
 
                 <button
                   type="submit"
                   disabled={formStatus === 'submitting'}
-                  className="w-full bg-accent-blue-500 hover:bg-accent-blue-600 text-white px-6 py-4 rounded-lg font-semibold text-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-[1.02] active:scale-[0.98]"
+                  className="w-full pill-button pill-button-primary justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {formStatus === 'submitting' ? 'Sending...' : 'Send Message'}
+                  {formStatus === 'submitting' ? 'Sending...' : 'Send message'}
                 </button>
               </form>
             </div>
 
-            {/* Contact Information */}
-            <div>
-              <div className="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 mb-8">
-                <h2 className="text-3xl font-bold text-navy-900 mb-8">
-                  Contact Information
+            {/* Info */}
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-2xl md:text-3xl font-bold text-apple-light tracking-[-0.02em] mb-8">
+                  Contact information
                 </h2>
                 <div className="space-y-6">
-                  <div className="flex items-start">
-                    <svg
-                      className="h-7 w-7 text-accent-blue-500 mr-4 mt-1"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                      />
+                  <div className="flex items-start gap-4">
+                    <svg className="w-5 h-5 text-apple-blue mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                     </svg>
                     <div>
-                      <div className="font-bold text-navy-900 text-lg mb-1">Email</div>
-                      <a
-                        href="mailto:hello@northern-analytics.com"
-                        className="text-accent-blue-600 hover:text-accent-blue-700 text-base"
-                      >
+                      <div className="text-apple-light text-base font-medium mb-1">Email</div>
+                      <a href="mailto:hello@northern-analytics.com" className="text-apple-blue hover:underline text-base">
                         hello@northern-analytics.com
                       </a>
                     </div>
                   </div>
 
-                  <div className="flex items-start">
-                    <svg
-                      className="h-7 w-7 text-accent-blue-500 mr-4 mt-1"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                      />
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                      />
+                  <div className="flex items-start gap-4">
+                    <svg className="w-5 h-5 text-apple-blue mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                     </svg>
                     <div>
-                      <div className="font-bold text-navy-900 text-lg mb-1">Location</div>
-                      <div className="text-gray-600 text-base">
-                        Fort McMurray, AB, Canada
-                      </div>
+                      <div className="text-apple-light text-base font-medium mb-1">Location</div>
+                      <div className="text-apple-gray text-base">Fort McMurray, AB, Canada</div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-accent-blue-500 to-accent-blue-600 p-10 rounded-2xl text-white shadow-xl">
-                <h3 className="text-3xl font-bold mb-6">What to Expect</h3>
-                <ul className="space-y-5">
-                  <li className="flex items-start">
-                    <svg
-                      className="h-7 w-7 mr-4 mt-0.5 flex-shrink-0"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2.5}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    <span className="text-lg leading-relaxed">Response within 24 hours</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg
-                      className="h-7 w-7 mr-4 mt-0.5 flex-shrink-0"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2.5}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    <span className="text-lg leading-relaxed">Free 30-minute consultation</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg
-                      className="h-7 w-7 mr-4 mt-0.5 flex-shrink-0"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2.5}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    <span className="text-lg leading-relaxed">High-level ROI estimate</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg
-                      className="h-7 w-7 mr-4 mt-0.5 flex-shrink-0"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2.5}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    <span className="text-lg leading-relaxed">No obligation or pressure</span>
-                  </li>
+              <div className="bg-[#161617] rounded-3xl p-8 md:p-10">
+                <h3 className="text-xl md:text-2xl font-bold text-apple-light tracking-[-0.02em] mb-6">
+                  What to expect
+                </h3>
+                <ul className="space-y-4">
+                  {[
+                    'Response within 24 hours',
+                    'Free 30-minute consultation',
+                    'High-level ROI estimate',
+                    'No obligation or pressure',
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <div className="w-5 h-5 mt-0.5 rounded-full bg-apple-blue/20 flex items-center justify-center flex-shrink-0">
+                        <svg className="w-3 h-3 text-apple-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <span className="text-apple-light/70 text-base">{item}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>

@@ -1,13 +1,19 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 10);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navigation = [
-    { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
     { name: 'Process', href: '/process' },
     { name: 'About', href: '/about' },
@@ -15,22 +21,29 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-navy-900/95 backdrop-blur-md text-white sticky top-0 z-50 shadow-lg border-b border-navy-800">
-      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Top">
-        <div className="flex h-20 items-center justify-between">
-          <div className="flex items-center">
-            <Link href="/" className="text-xl font-bold hover:text-accent-blue-400 transition-colors">
-              Northern Analytics
-            </Link>
-          </div>
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? 'frosted-glass border-b border-white/[0.08]'
+          : 'bg-transparent'
+      }`}
+    >
+      <nav className="mx-auto max-w-[980px] px-4 sm:px-6 lg:px-8" aria-label="Top">
+        <div className="flex h-12 items-center justify-between">
+          <Link
+            href="/"
+            className="text-sm font-semibold text-apple-light/90 hover:text-white transition-colors"
+          >
+            Northern Analytics
+          </Link>
 
           {/* Desktop navigation */}
-          <div className="hidden md:flex md:gap-x-8">
+          <div className="hidden md:flex md:gap-x-7">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-base font-medium hover:text-accent-blue-400 transition-colors px-1"
+                className="text-xs font-normal text-apple-gray hover:text-white transition-colors"
               >
                 {item.name}
               </Link>
@@ -41,18 +54,17 @@ export default function Header() {
           <div className="md:hidden">
             <button
               type="button"
-              className="text-white p-2 rounded-lg hover:bg-navy-800 transition-colors"
+              className="text-apple-gray hover:text-white p-2 transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
               aria-expanded={mobileMenuOpen}
             >
               <svg
-                className="h-6 w-6"
+                className="h-5 w-5"
                 fill="none"
                 viewBox="0 0 24 24"
-                strokeWidth="2"
+                strokeWidth="1.5"
                 stroke="currentColor"
-                aria-hidden="true"
               >
                 {mobileMenuOpen ? (
                   <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -66,12 +78,12 @@ export default function Header() {
 
         {/* Mobile menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 space-y-1 border-t border-navy-800">
+          <div className="md:hidden py-3 space-y-1 border-t border-white/[0.08]">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="block px-4 py-3 rounded-lg text-base font-medium hover:bg-navy-800 transition-colors"
+                className="block px-3 py-2 text-sm text-apple-gray hover:text-white transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item.name}
