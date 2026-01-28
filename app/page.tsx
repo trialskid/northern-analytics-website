@@ -37,7 +37,7 @@ export default function Home() {
       {/* Stats */}
       <section className="bg-black section-divider py-20 md:py-28">
         <div className="mx-auto max-w-[980px] px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
             {[
               { value: '100+', label: 'Projects Completed' },
               { value: '2,000+', label: 'Hours Saved Monthly' },
