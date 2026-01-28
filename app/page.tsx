@@ -37,7 +37,7 @@ export default function Home() {
       {/* Stats */}
       <section className="bg-black section-divider py-20 md:py-28">
         <div className="mx-auto max-w-[980px] px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-16">
             {[
               { value: '100+', label: 'Projects Completed' },
               { value: '2,000+', label: 'Hours Saved Monthly' },
@@ -45,7 +45,7 @@ export default function Home() {
               { value: '5+', label: 'Years Experience' },
             ].map((stat, i) => (
               <div key={i} className="text-center">
-                <div className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-[-0.04em] text-apple-light mb-2">
+                <div className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-[-0.04em] text-apple-light mb-2">
                   {stat.value}
                 </div>
                 <div className="text-apple-gray text-sm md:text-base font-medium">
