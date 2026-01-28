@@ -32,7 +32,7 @@ export default function Header() {
         <div className="flex h-12 items-center justify-between">
           <Link
             href="/"
-            className="text-base font-semibold text-apple-light/90 hover:text-white transition-colors"
+            className="text-lg font-semibold text-apple-light/90 hover:text-white transition-colors"
           >
             Northern Analytics
           </Link>
