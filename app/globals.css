@@ -22,26 +22,11 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Apple-style gradient text */
-.gradient-text {
-  background: linear-gradient(135deg, #2997ff 0%, #a855f7 50%, #14b8a6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.gradient-text-blue {
-  background: linear-gradient(135deg, #2997ff 0%, #64b5f6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
+/* Emphasis text - bold white */
+.gradient-text,
+.gradient-text-blue,
 .gradient-text-subtle {
-  background: linear-gradient(135deg, #f5f5f7 0%, #86868b 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #f5f5f7;
 }
 
 /* Frosted glass */
