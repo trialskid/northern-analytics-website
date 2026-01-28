@@ -15,11 +15,11 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-navy-900 text-white sticky top-0 z-50 shadow-lg">
+    <header className="bg-navy-900/95 backdrop-blur-md text-white sticky top-0 z-50 shadow-lg border-b border-navy-800">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Top">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-20 items-center justify-between">
           <div className="flex items-center">
-            <Link href="/" className="text-xl font-bold hover:text-accent-blue-500 transition-colors">
+            <Link href="/" className="text-xl font-bold hover:text-accent-blue-400 transition-colors">
               Northern Analytics
             </Link>
           </div>
@@ -30,7 +30,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-sm font-medium hover:text-accent-blue-500 transition-colors"
+                className="text-base font-medium hover:text-accent-blue-400 transition-colors px-1"
               >
                 {item.name}
               </Link>
@@ -41,7 +41,7 @@ export default function Header() {
           <div className="md:hidden">
             <button
               type="button"
-              className="text-white"
+              className="text-white p-2 rounded-lg hover:bg-navy-800 transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
               aria-expanded={mobileMenuOpen}
@@ -50,7 +50,7 @@ export default function Header() {
                 className="h-6 w-6"
                 fill="none"
                 viewBox="0 0 24 24"
-                strokeWidth="1.5"
+                strokeWidth="2"
                 stroke="currentColor"
                 aria-hidden="true"
               >
@@ -66,12 +66,12 @@ export default function Header() {
 
         {/* Mobile menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 space-y-2">
+          <div className="md:hidden py-4 space-y-1 border-t border-navy-800">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-navy-800 transition-colors"
+                className="block px-4 py-3 rounded-lg text-base font-medium hover:bg-navy-800 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item.name}

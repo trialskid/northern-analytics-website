@@ -39,13 +39,17 @@ export default function Contact() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-navy-900 via-navy-800 to-navy-700 text-white py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-gradient-to-br from-navy-900 via-navy-800 to-navy-700 text-white py-24 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(59,130,246,0.3),transparent_50%)]" />
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
               Let&apos;s Talk About Your Project
             </h1>
-            <p className="text-xl text-gray-300">
+            <p className="text-xl md:text-2xl text-gray-200 font-light">
               Book a 30-minute consultation and receive a high-level ROI estimate
             </p>
           </div>
@@ -53,12 +57,12 @@ export default function Contact() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-24 bg-gray-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 gap-16">
             {/* Contact Form */}
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <h2 className="text-2xl font-bold text-navy-900 mb-6">
+            <div className="bg-white p-10 rounded-2xl shadow-sm border border-gray-100">
+              <h2 className="text-3xl font-bold text-navy-900 mb-8">
                 Send Us a Message
               </h2>
 
@@ -84,7 +88,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="name"
-                    className="block text-sm font-medium text-gray-700 mb-1"
+                    className="block text-base font-semibold text-gray-700 mb-2"
                   >
                     Name *
                   </label>
@@ -93,7 +97,7 @@ export default function Contact() {
                     id="name"
                     name="name"
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-blue-500 focus:border-accent-blue-500 transition-all text-base"
                     disabled={formStatus === 'submitting'}
                   />
                 </div>
@@ -101,7 +105,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-gray-700 mb-1"
+                    className="block text-base font-semibold text-gray-700 mb-2"
                   >
                     Email *
                   </label>
@@ -110,7 +114,7 @@ export default function Contact() {
                     id="email"
                     name="email"
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-blue-500 focus:border-accent-blue-500 transition-all text-base"
                     disabled={formStatus === 'submitting'}
                   />
                 </div>
@@ -118,7 +122,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="company"
-                    className="block text-sm font-medium text-gray-700 mb-1"
+                    className="block text-base font-semibold text-gray-700 mb-2"
                   >
                     Company
                   </label>
@@ -126,7 +130,7 @@ export default function Contact() {
                     type="text"
                     id="company"
                     name="company"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-blue-500 focus:border-accent-blue-500 transition-all text-base"
                     disabled={formStatus === 'submitting'}
                   />
                 </div>
@@ -134,7 +138,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="phone"
-                    className="block text-sm font-medium text-gray-700 mb-1"
+                    className="block text-base font-semibold text-gray-700 mb-2"
                   >
                     Phone
                   </label>
@@ -142,7 +146,7 @@ export default function Contact() {
                     type="tel"
                     id="phone"
                     name="phone"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-blue-500 focus:border-accent-blue-500 transition-all text-base"
                     disabled={formStatus === 'submitting'}
                   />
                 </div>
@@ -150,14 +154,14 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="service"
-                    className="block text-sm font-medium text-gray-700 mb-1"
+                    className="block text-base font-semibold text-gray-700 mb-2"
                   >
                     Service Interested In
                   </label>
                   <select
                     id="service"
                     name="service"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-blue-500 focus:border-accent-blue-500 transition-all text-base bg-white"
                     disabled={formStatus === 'submitting'}
                   >
                     <option value="">Select a service</option>
@@ -173,7 +177,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium text-gray-700 mb-1"
+                    className="block text-base font-semibold text-gray-700 mb-2"
                   >
                     Message *
                   </label>
@@ -181,8 +185,8 @@ export default function Contact() {
                     id="message"
                     name="message"
                     required
-                    rows={5}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-blue-500 focus:border-transparent"
+                    rows={6}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-blue-500 focus:border-accent-blue-500 transition-all text-base resize-none"
                     disabled={formStatus === 'submitting'}
                   ></textarea>
                 </div>
@@ -190,7 +194,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={formStatus === 'submitting'}
-                  className="w-full bg-accent-blue-500 hover:bg-accent-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-accent-blue-500 hover:bg-accent-blue-600 text-white px-6 py-4 rounded-lg font-semibold text-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-[1.02] active:scale-[0.98]"
                 >
                   {formStatus === 'submitting' ? 'Sending...' : 'Send Message'}
                 </button>
@@ -199,14 +203,14 @@ export default function Contact() {
 
             {/* Contact Information */}
             <div>
-              <div className="bg-white p-8 rounded-lg shadow-md mb-8">
-                <h2 className="text-2xl font-bold text-navy-900 mb-6">
+              <div className="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 mb-8">
+                <h2 className="text-3xl font-bold text-navy-900 mb-8">
                   Contact Information
                 </h2>
-                <div className="space-y-4">
+                <div className="space-y-6">
                   <div className="flex items-start">
                     <svg
-                      className="h-6 w-6 text-accent-blue-500 mr-3 mt-1"
+                      className="h-7 w-7 text-accent-blue-500 mr-4 mt-1"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -219,10 +223,10 @@ export default function Contact() {
                       />
                     </svg>
                     <div>
-                      <div className="font-semibold text-navy-900">Email</div>
+                      <div className="font-bold text-navy-900 text-lg mb-1">Email</div>
                       <a
                         href="mailto:hello@northern-analytics.com"
-                        className="text-accent-blue-600 hover:text-accent-blue-700"
+                        className="text-accent-blue-600 hover:text-accent-blue-700 text-base"
                       >
                         hello@northern-analytics.com
                       </a>
@@ -231,7 +235,7 @@ export default function Contact() {
 
                   <div className="flex items-start">
                     <svg
-                      className="h-6 w-6 text-accent-blue-500 mr-3 mt-1"
+                      className="h-7 w-7 text-accent-blue-500 mr-4 mt-1"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -250,8 +254,8 @@ export default function Contact() {
                       />
                     </svg>
                     <div>
-                      <div className="font-semibold text-navy-900">Location</div>
-                      <div className="text-gray-600">
+                      <div className="font-bold text-navy-900 text-lg mb-1">Location</div>
+                      <div className="text-gray-600 text-base">
                         Fort McMurray, AB, Canada
                       </div>
                     </div>
@@ -259,12 +263,12 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-accent-blue-500 to-accent-blue-600 p-8 rounded-lg text-white">
-                <h3 className="text-2xl font-bold mb-4">What to Expect</h3>
-                <ul className="space-y-3">
+              <div className="bg-gradient-to-br from-accent-blue-500 to-accent-blue-600 p-10 rounded-2xl text-white shadow-xl">
+                <h3 className="text-3xl font-bold mb-6">What to Expect</h3>
+                <ul className="space-y-5">
                   <li className="flex items-start">
                     <svg
-                      className="h-6 w-6 mr-3 mt-0.5 flex-shrink-0"
+                      className="h-7 w-7 mr-4 mt-0.5 flex-shrink-0"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -272,15 +276,15 @@ export default function Contact() {
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        strokeWidth={2}
+                        strokeWidth={2.5}
                         d="M5 13l4 4L19 7"
                       />
                     </svg>
-                    <span>Response within 24 hours</span>
+                    <span className="text-lg leading-relaxed">Response within 24 hours</span>
                   </li>
                   <li className="flex items-start">
                     <svg
-                      className="h-6 w-6 mr-3 mt-0.5 flex-shrink-0"
+                      className="h-7 w-7 mr-4 mt-0.5 flex-shrink-0"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -288,15 +292,15 @@ export default function Contact() {
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        strokeWidth={2}
+                        strokeWidth={2.5}
                         d="M5 13l4 4L19 7"
                       />
                     </svg>
-                    <span>Free 30-minute consultation</span>
+                    <span className="text-lg leading-relaxed">Free 30-minute consultation</span>
                   </li>
                   <li className="flex items-start">
                     <svg
-                      className="h-6 w-6 mr-3 mt-0.5 flex-shrink-0"
+                      className="h-7 w-7 mr-4 mt-0.5 flex-shrink-0"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -304,15 +308,15 @@ export default function Contact() {
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        strokeWidth={2}
+                        strokeWidth={2.5}
                         d="M5 13l4 4L19 7"
                       />
                     </svg>
-                    <span>High-level ROI estimate</span>
+                    <span className="text-lg leading-relaxed">High-level ROI estimate</span>
                   </li>
                   <li className="flex items-start">
                     <svg
-                      className="h-6 w-6 mr-3 mt-0.5 flex-shrink-0"
+                      className="h-7 w-7 mr-4 mt-0.5 flex-shrink-0"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -320,11 +324,11 @@ export default function Contact() {
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        strokeWidth={2}
+                        strokeWidth={2.5}
                         d="M5 13l4 4L19 7"
                       />
                     </svg>
-                    <span>No obligation or pressure</span>
+                    <span className="text-lg leading-relaxed">No obligation or pressure</span>
                   </li>
                 </ul>
               </div>
