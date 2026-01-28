@@ -15,7 +15,7 @@ export default function Home() {
             Accelerate.
           </h1>
           <p className="text-xl md:text-2xl text-apple-gray max-w-2xl mx-auto leading-relaxed font-light mb-10">
-            We transform manual processes into automated workflows, build custom applications in weeks, and turn data into insights with Power BI.
+            We kill manual processes, build custom apps in weeks, and make your data actually useful with Power BI.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link href="/contact" className="pill-button pill-button-primary">
@@ -65,7 +65,7 @@ export default function Home() {
               What we build.
             </h2>
             <p className="text-xl text-apple-gray max-w-xl mx-auto font-light">
-              End-to-end Power Platform solutions that scale with your business.
+              Power Platform solutions that grow with you.
             </p>
           </div>
 
@@ -118,7 +118,7 @@ export default function Home() {
               },
               {
                 title: 'Data Integration & Migration',
-                desc: 'Seamlessly connect systems and migrate legacy data into modern platforms.',
+                desc: 'Connect your systems and move old data into platforms that actually work.',
                 icon: (
                   <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
@@ -162,7 +162,7 @@ export default function Home() {
                 <span className="gradient-text-blue">Analytics.</span>
               </h2>
               <p className="text-xl text-apple-gray mb-10 font-light leading-relaxed">
-                We combine deep technical expertise with business process understanding to deliver measurable results.
+                We know the tech inside and out, and we understand how your business actually runs. That combination is rare.
               </p>
               <div className="space-y-6">
                 {[
@@ -171,7 +171,7 @@ export default function Home() {
                   'Make data-driven decisions with real-time analytics',
                   'Eliminate errors in repetitive tasks',
                   'Improve efficiency across departments',
-                  'Leverage certified Microsoft Power Platform expertise',
+                  'Work with certified Microsoft Power Platform specialists',
                 ].map((benefit, i) => (
                   <div key={i} className="flex items-start gap-4">
                     <div className="w-5 h-5 mt-0.5 rounded-full bg-apple-blue/20 flex items-center justify-center flex-shrink-0">
@@ -190,7 +190,7 @@ export default function Home() {
                 Ready to get started?
               </h3>
               <p className="text-apple-gray text-lg leading-relaxed mb-8">
-                Let&apos;s quantify your automation opportunity. Book a 30-minute consultation and receive a high-level ROI estimate.
+                Tell us what&apos;s eating your team&apos;s time. We&apos;ll show you what automation could save you in a free 30-minute call.
               </p>
               <Link href="/contact" className="pill-button pill-button-primary">
                 Schedule your consultation
@@ -211,14 +211,14 @@ export default function Home() {
               How we deliver.
             </h2>
             <p className="text-xl text-apple-gray max-w-xl mx-auto font-light">
-              A proven 4-step methodology that delivers results.
+              Four steps. No fluff. Working software at the end.
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1">
             {[
               { num: '01', title: 'Discovery & Analysis', desc: 'Map processes, align KPIs.', time: '1-2 weeks' },
-              { num: '02', title: 'Solution Design', desc: 'Architect scalable, secure Power Platform solution.', time: '1 week' },
+              { num: '02', title: 'Solution Design', desc: 'Design the right Power Platform solution for your needs.', time: '1 week' },
               { num: '03', title: 'Development & Testing', desc: 'Agile sprints, UAT, and performance benchmarking.', time: '2-8 weeks' },
               { num: '04', title: 'Deployment & Training', desc: 'Go-live support, hand-over, success metrics dashboard.', time: '1 week' },
             ].map((step, i) => (
@@ -259,7 +259,7 @@ export default function Home() {
             <span className="gradient-text">processes today.</span>
           </h2>
           <p className="text-xl text-apple-gray max-w-2xl mx-auto font-light leading-relaxed mb-10">
-            Let&apos;s quantify your automation opportunity. Book a 30-minute consultation and receive a high-level ROI estimate.
+            Tell us what&apos;s slowing your team down. We&apos;ll map out a plan in a free 30-minute call.
           </p>
           <Link href="/contact" className="pill-button pill-button-primary">
             Book your free consultation

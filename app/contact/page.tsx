@@ -35,7 +35,7 @@ export default function Contact() {
                 Let&apos;s start a conversation
               </h2>
               <p className="text-apple-gray text-lg leading-relaxed mb-10">
-                Ready to automate your business processes? Send us an email and we&apos;ll get back to you within 24 hours with a plan to get started.
+                Drop us an email. Tell us what&apos;s eating your team&apos;s time. We&apos;ll get back to you within 24 hours.
               </p>
 
               <a

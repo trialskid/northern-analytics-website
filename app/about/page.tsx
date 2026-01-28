@@ -16,7 +16,7 @@ export default function About() {
             About <span className="gradient-text">us.</span>
           </h1>
           <p className="text-xl md:text-2xl text-apple-gray max-w-2xl mx-auto leading-relaxed font-light">
-            Enterprise-grade Power Platform solutions for businesses of any size.
+            Big-company results without the big-company price tag.
           </p>
         </div>
       </section>
@@ -25,13 +25,13 @@ export default function About() {
       <section className="bg-apple-black section-divider py-24 md:py-36">
         <div className="mx-auto max-w-[680px] px-4 sm:px-6 lg:px-8">
           <p className="text-xl md:text-2xl text-apple-light/80 leading-relaxed mb-8 font-light">
-            Northern Analytics was founded by Jamey Gulley, a business intelligence and automation expert with over 5 years of experience in Oil & Gas and enterprise environments.
+            Northern Analytics was started by Jamey Gulley. He&apos;s spent over five years building BI and automation solutions in Oil &amp; Gas and enterprise settings.
           </p>
           <p className="text-xl md:text-2xl text-apple-light/80 leading-relaxed mb-8 font-light">
-            Since entering the field, Jamey has helped organizations replace manual processes with data-driven workflows on the Microsoft Power Platform, delivering 100+ projects and saving clients more than 2,000 hours every month.
+            Over that time, he&apos;s shipped 100+ projects on the Microsoft Power Platform, replacing manual busywork with automated workflows. His clients save over 2,000 hours a month combined.
           </p>
           <p className="text-xl md:text-2xl text-apple-light/80 leading-relaxed font-light">
-            In 2025, Jamey launched Northern Analytics to make enterprise-grade results available to businesses of any size and industry. Combining technical depth with a clear understanding of business processes, we build solutions that surface insights, cut cycle times, and scale without extra headcount.
+            In 2025, he launched Northern Analytics. The idea was simple: smaller businesses deserve the same quality of automation and analytics that big companies get. We build solutions that save time, surface the numbers that matter, and don&apos;t require hiring more people to maintain.
           </p>
         </div>
       </section>
@@ -102,10 +102,10 @@ export default function About() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-1">
             {[
-              { title: 'Results-Driven', desc: 'We focus on measurable outcomes and ROI, not just deliverables.' },
-              { title: 'Business-First', desc: 'Technology serves business goals, not the other way around.' },
-              { title: 'Efficiency-Focused', desc: 'Every solution is designed to save time and eliminate waste.' },
-              { title: 'Partnership Approach', desc: 'We work alongside you, ensuring knowledge transfer and long-term success.' },
+              { title: 'Results-Driven', desc: 'If it doesn&apos;t save you time or money, we haven&apos;t done our job.' },
+              { title: 'Business-First', desc: 'We start with your problem, not the technology. The tech is just how we solve it.' },
+              { title: 'Efficiency-Focused', desc: 'Every solution we build is designed to get rid of wasted time.' },
+              { title: 'No Hand-Off', desc: 'We teach your team to run things without us. The goal is independence, not dependency.' },
             ].map((value, i) => (
               <div key={i} className="bg-[#161617] rounded-2xl p-8 md:p-10 hover:bg-[#1c1c1e] transition-colors">
                 <div className="text-3xl md:text-4xl font-bold gradient-text-blue tracking-[-0.03em] mb-4">
@@ -132,7 +132,7 @@ export default function About() {
                 Deep Microsoft Power Platform expertise.
               </h2>
               <p className="text-xl text-apple-gray mb-10 font-light leading-relaxed">
-                With extensive experience across the entire Microsoft Power Platform ecosystem, we deliver solutions that are technically sound, scalable, and aligned with Microsoft best practices.
+                We&apos;ve worked with every part of the Microsoft Power Platform. The solutions we build are solid, follow Microsoft&apos;s recommended patterns, and won&apos;t fall apart when you need to change something.
               </p>
               <div className="space-y-4">
                 {[
@@ -158,10 +158,10 @@ export default function About() {
                 Based in Fort McMurray
               </h3>
               <p className="text-apple-gray text-lg leading-relaxed mb-6">
-                Proudly serving businesses in Fort McMurray, Alberta, and across Canada with remote and on-site consulting services.
+                We work with businesses in Fort McMurray, across Alberta, and anywhere in Canada. Remote or on-site, whatever works.
               </p>
               <p className="text-apple-gray/70 text-base leading-relaxed">
-                We understand the unique challenges of businesses in Northern Alberta and bring solutions that work in real-world industrial and enterprise environments.
+                We know Northern Alberta. We know the industries up here and the real-world conditions your solutions need to work in. That context matters.
               </p>
             </div>
           </div>

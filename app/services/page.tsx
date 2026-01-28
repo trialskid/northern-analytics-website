@@ -11,7 +11,7 @@ export default function Services() {
     {
       title: 'Process Automation',
       tagline: 'Power Automate workflows that cut cycle times by up to 80%.',
-      description: 'Eliminate manual, repetitive tasks with intelligent automation. Our Power Automate solutions connect your systems, streamline approvals, and ensure consistent execution across your organization.',
+      description: 'Stop doing the same thing over and over. Power Automate connects your systems, handles approvals, and runs processes the same way every time without anyone babysitting them.',
       benefits: [
         'Reduce manual data entry and file handling',
         'Automate approval workflows and notifications',
@@ -28,7 +28,7 @@ export default function Services() {
     {
       title: 'Custom Applications',
       tagline: 'Low-code Power Apps built in weeks, not months.',
-      description: 'Build custom business applications without extensive coding. Our Power Apps solutions deliver mobile-ready, intuitive interfaces that integrate with your existing data and workflows.',
+      description: 'Need an app for your team? We build them with Power Apps. They work on phones, connect to your existing data, and ship in weeks instead of months.',
       benefits: [
         'Deploy mobile-ready apps in weeks',
         'Integrate seamlessly with Microsoft 365',
@@ -45,7 +45,7 @@ export default function Services() {
     {
       title: 'Business Intelligence',
       tagline: 'Interactive dashboards and automated reporting with Power BI.',
-      description: 'Transform raw data into actionable insights. Our Power BI solutions deliver real-time dashboards, automated reports, and self-service analytics that empower data-driven decision making.',
+      description: 'Your data is already telling you something. Power BI turns it into dashboards your team will actually use, reports that send themselves, and answers you can act on.',
       benefits: [
         'Visualize KPIs in real-time dashboards',
         'Automate report generation and distribution',
@@ -62,7 +62,7 @@ export default function Services() {
     {
       title: 'SharePoint Solutions',
       tagline: 'Modern intranets and document automation. Secure, integrated, end-to-end.',
-      description: 'Build collaborative workspaces that enhance productivity. Our SharePoint solutions provide document management, team collaboration, and intranet capabilities that scale with your organization.',
+      description: 'A place for your documents, your team, and your processes. We build SharePoint sites that people actually want to use, not just another portal that collects dust.',
       benefits: [
         'Centralize document storage and management',
         'Enable secure external collaboration',
@@ -79,7 +79,7 @@ export default function Services() {
     {
       title: 'Spreadsheet Engineering & Templates',
       tagline: 'Robust Excel models that scale with your data and governance policies.',
-      description: 'Transform spreadsheets into reliable business tools. Our Excel engineering services create scalable, maintainable models with proper documentation, validation, and governance.',
+      description: 'Your critical spreadsheet shouldn&apos;t break when someone looks at it wrong. We build Excel models that are documented, validated, and tough enough for real-world use.',
       benefits: [
         'Build complex financial and operational models',
         'Implement data validation and error checking',
@@ -104,7 +104,7 @@ export default function Services() {
             Our <span className="gradient-text">services.</span>
           </h1>
           <p className="text-xl md:text-2xl text-apple-gray max-w-2xl mx-auto leading-relaxed font-light">
-            Comprehensive solutions that transform how you work, built on the Microsoft Power Platform ecosystem.
+            Everything we build runs on the Microsoft Power Platform. Here&apos;s what that looks like in practice.
           </p>
         </div>
       </section>
@@ -166,7 +166,7 @@ export default function Services() {
             Ready to <span className="gradient-text">transform</span> your business?
           </h2>
           <p className="text-xl text-apple-gray max-w-2xl mx-auto font-light leading-relaxed mb-10">
-            Let&apos;s discuss how our Power Platform expertise can deliver measurable results for your organization.
+            Tell us what&apos;s not working. We&apos;ll figure out how to fix it.
           </p>
           <Link href="/contact" className="pill-button pill-button-primary">
             Schedule a consultation

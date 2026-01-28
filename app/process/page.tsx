@@ -12,8 +12,8 @@ export default function Process() {
       number: '01',
       phase: 'Discovery & Analysis',
       duration: '1-2 weeks',
-      description: 'Map processes, align KPIs.',
-      details: 'We start by understanding your current state and desired outcomes. Through stakeholder interviews and process mapping, we identify automation opportunities, pain points, and success metrics.',
+      description: 'We figure out what&apos;s broken.',
+      details: 'Before we build anything, we need to understand how things work today and where they&apos;re falling apart. We talk to your people, map out the processes, and find the spots where automation will make the biggest difference.',
       activities: [
         'Stakeholder interviews and requirements gathering',
         'Current state process mapping and documentation',
@@ -33,8 +33,8 @@ export default function Process() {
       number: '02',
       phase: 'Solution Design',
       duration: '1 week',
-      description: 'Architect scalable, secure Power Platform solution.',
-      details: 'We design a solution that balances technical excellence with business value. Our architecture ensures scalability, security, and maintainability while leveraging Power Platform best practices.',
+      description: 'We design the fix.',
+      details: 'Now we plan the actual solution. What gets built, how it connects, how it stays secure, and how your team will use it. No over-engineering, just what you need.',
       activities: [
         'Solution architecture design',
         'Data model and integration planning',
@@ -54,8 +54,8 @@ export default function Process() {
       number: '03',
       phase: 'Development & Testing',
       duration: '2-8 weeks',
-      description: 'Agile sprints, UAT, and performance benchmarking.',
-      details: 'Using agile methodology, we build your solution in iterative sprints. Each sprint includes development, testing, and stakeholder review to ensure we stay aligned with your needs.',
+      description: 'We build it and you test it.',
+      details: 'We work in short sprints. Build a piece, show it to you, get feedback, adjust, repeat. You&apos;re never in the dark about where things stand, and the final product is what you actually asked for.',
       activities: [
         'Iterative development in 1-2 week sprints',
         'Continuous integration and testing',
@@ -75,8 +75,8 @@ export default function Process() {
       number: '04',
       phase: 'Deployment & Training',
       duration: '1 week',
-      description: 'Go-live support, hand-over, success metrics dashboard.',
-      details: 'We ensure a smooth transition to production with comprehensive training, go-live support, and knowledge transfer. Your team will be fully equipped to use and maintain the solution.',
+      description: 'We ship it and train your team.',
+      details: 'We put it into production, train your people to use it, and stick around to make sure everything runs smoothly. You get the docs, the know-how, and a dashboard to track how it&apos;s performing.',
       activities: [
         'Production environment deployment',
         'User and administrator training sessions',
@@ -104,7 +104,7 @@ export default function Process() {
             Our <span className="gradient-text">process.</span>
           </h1>
           <p className="text-xl md:text-2xl text-apple-gray max-w-2xl mx-auto leading-relaxed font-light">
-            A structured 4-step methodology that delivers Power Platform solutions on time, on budget, and aligned with your business goals.
+            Four steps from &quot;we need help&quot; to &quot;it&apos;s live and working.&quot; No surprises, no scope creep, no endless timelines.
           </p>
         </div>
       </section>
@@ -195,9 +195,9 @@ export default function Process() {
           </h2>
           <div className="grid md:grid-cols-3 gap-1">
             {[
-              { title: 'Goal-Oriented', desc: 'Every step is aligned with your business objectives and success metrics.' },
-              { title: 'Iterative & Agile', desc: 'Regular checkpoints ensure we stay aligned and can adapt quickly.' },
-              { title: 'Proven Results', desc: '100+ successful projects delivered using this methodology.' },
+              { title: 'Goal-Oriented', desc: 'We don&apos;t build things for the sake of building. Every step ties back to what you&apos;re trying to accomplish.' },
+              { title: 'Iterative', desc: 'Regular check-ins mean we catch problems early and adjust before they get expensive.' },
+              { title: 'Battle-Tested', desc: 'We&apos;ve done this 100+ times. The process works.' },
             ].map((item, i) => (
               <div key={i} className="bg-[#161617] rounded-2xl p-8 md:p-10 hover:bg-[#1c1c1e] transition-colors text-center">
                 <div className="text-4xl md:text-5xl font-bold gradient-text-blue tracking-[-0.03em] mb-5">
@@ -222,7 +222,7 @@ export default function Process() {
             Ready to <span className="gradient-text">get started?</span>
           </h2>
           <p className="text-xl text-apple-gray max-w-2xl mx-auto font-light leading-relaxed mb-10">
-            Let&apos;s discuss your project and how our proven process can deliver results for your organization.
+            Got a project in mind? Let&apos;s talk about it.
           </p>
           <Link href="/contact" className="pill-button pill-button-primary">
             Schedule a consultation
