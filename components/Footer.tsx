@@ -26,8 +26,8 @@ export default function Footer() {
             </Link>
           ))}
           <span className="text-white/[0.08]">|</span>
-          <a href="mailto:jameygulley@northern-analytics.com" className="hover:text-white transition-colors">
-            jameygulley@northern-analytics.com
+          <a href="mailto:contact@northern-analytics.com" className="hover:text-white transition-colors">
+            contact@northern-analytics.com
           </a>
         </div>
 

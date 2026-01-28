@@ -5,7 +5,7 @@ export default function Schema() {
     name: 'Northern Analytics',
     description: 'Microsoft Power Platform consulting services specializing in Power BI, Power Automate, Power Apps, SharePoint, and Excel solutions.',
     url: 'https://northern-analytics.com',
-    email: 'jameygulley@northern-analytics.com',
+    email: 'contact@northern-analytics.com',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Fort McMurray',
@@ -38,7 +38,7 @@ export default function Schema() {
     image: 'https://northern-analytics.com/logo.png',
     '@id': 'https://northern-analytics.com',
     url: 'https://northern-analytics.com',
-    email: 'jameygulley@northern-analytics.com',
+    email: 'contact@northern-analytics.com',
     address: {
       '@type': 'PostalAddress',
       streetAddress: '',

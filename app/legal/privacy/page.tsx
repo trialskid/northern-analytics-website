@@ -85,7 +85,7 @@ export default function Privacy() {
             <h2 className="text-2xl font-bold text-navy-900 mt-8 mb-4">Your Rights</h2>
             <p className="text-gray-700 mb-6">
               You have the right to access, correct, or delete your personal information. To
-              exercise these rights, please contact us at jameygulley@northern-analytics.com.
+              exercise these rights, please contact us at contact@northern-analytics.com.
             </p>
 
             <h2 className="text-2xl font-bold text-navy-900 mt-8 mb-4">Changes to This Policy</h2>
@@ -106,10 +106,10 @@ export default function Privacy() {
               <br />
               Email:{' '}
               <a
-                href="mailto:jameygulley@northern-analytics.com"
+                href="mailto:contact@northern-analytics.com"
                 className="text-accent-blue-600 hover:text-accent-blue-700"
               >
-                jameygulley@northern-analytics.com
+                contact@northern-analytics.com
               </a>
             </p>
           </div>

@@ -107,10 +107,10 @@ export default function Terms() {
               <br />
               Email:{' '}
               <a
-                href="mailto:jameygulley@northern-analytics.com"
+                href="mailto:contact@northern-analytics.com"
                 className="text-accent-blue-600 hover:text-accent-blue-700"
               >
-                jameygulley@northern-analytics.com
+                contact@northern-analytics.com
               </a>
             </p>
           </div>

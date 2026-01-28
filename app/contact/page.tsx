@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 };
 
 export default function Contact() {
-  const email = 'jameygulley@northern-analytics.com';
+  const email = 'contact@northern-analytics.com';
   const subject = encodeURIComponent('Power Platform Consultation Request');
   const body = encodeURIComponent('Hi Jamey,\n\nI\'m interested in learning more about your Power Platform consulting services.\n\nName: \nCompany: \nPhone: \nService Interested In: \n\nMessage:\n\n');
 
