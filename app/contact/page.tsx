@@ -151,8 +151,8 @@ export default function Contact() {
                     </svg>
                     <div>
                       <div className="text-apple-light text-base font-medium mb-1">Email</div>
-                      <a href="mailto:hello@northern-analytics.com" className="text-apple-blue hover:underline text-base">
-                        hello@northern-analytics.com
+                      <a href="mailto:jameygulley@northern-analytics.com" className="text-apple-blue hover:underline text-base">
+                        jameygulley@northern-analytics.com
                       </a>
                     </div>
                   </div>
