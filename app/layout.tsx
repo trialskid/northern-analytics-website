@@ -47,6 +47,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="google-site-verification" content="fC-3M5E-rhgdzFBLm0C4kOVvwPmm0khlB1tyo6npmcU" />
         <Schema />
       </head>
       <body className={`${inter.className} tracking-tight`}>
