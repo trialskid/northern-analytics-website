@@ -79,7 +79,7 @@ export default function Services() {
     {
       title: 'Spreadsheet Engineering & Templates',
       tagline: 'Robust Excel models that scale with your data and governance policies.',
-      description: 'Your critical spreadsheet shouldn&apos;t break when someone looks at it wrong. We build Excel models that are documented, validated, and tough enough for real-world use.',
+      description: "Your critical spreadsheet shouldn't break when someone looks at it wrong. We build Excel models that are documented, validated, and tough enough for real-world use.",
       benefits: [
         'Build complex financial and operational models',
         'Implement data validation and error checking',

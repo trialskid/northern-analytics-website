@@ -12,8 +12,8 @@ export default function Process() {
       number: '01',
       phase: 'Discovery & Analysis',
       duration: '1-2 weeks',
-      description: 'We figure out what&apos;s broken.',
-      details: 'Before we build anything, we need to understand how things work today and where they&apos;re falling apart. We talk to your people, map out the processes, and find the spots where automation will make the biggest difference.',
+      description: "We figure out what's broken.",
+      details: "Before we build anything, we need to understand how things work today and where things are falling apart. We talk to your people, map out the processes, and find the spots where automation will make the biggest difference.",
       activities: [
         'Stakeholder interviews and requirements gathering',
         'Current state process mapping and documentation',
@@ -55,7 +55,7 @@ export default function Process() {
       phase: 'Development & Testing',
       duration: '2-8 weeks',
       description: 'We build it and you test it.',
-      details: 'We work in short sprints. Build a piece, show it to you, get feedback, adjust, repeat. You&apos;re never in the dark about where things stand, and the final product is what you actually asked for.',
+      details: "We work in short sprints. Build a piece, show it to you, get feedback, adjust, repeat. You're never in the dark about where things stand, and the final product is what you actually asked for.",
       activities: [
         'Iterative development in 1-2 week sprints',
         'Continuous integration and testing',
@@ -76,7 +76,7 @@ export default function Process() {
       phase: 'Deployment & Training',
       duration: '1 week',
       description: 'We ship it and train your team.',
-      details: 'We put it into production, train your people to use it, and stick around to make sure everything runs smoothly. You get the docs, the know-how, and a dashboard to track how it&apos;s performing.',
+      details: "We put it into production, train your people to use it, and stick around to make sure everything runs smoothly. You get the docs, the know-how, and a dashboard to track how it's performing.",
       activities: [
         'Production environment deployment',
         'User and administrator training sessions',
@@ -195,9 +195,9 @@ export default function Process() {
           </h2>
           <div className="grid md:grid-cols-3 gap-1">
             {[
-              { title: 'Goal-Oriented', desc: 'We don&apos;t build things for the sake of building. Every step ties back to what you&apos;re trying to accomplish.' },
+              { title: 'Goal-Oriented', desc: "We don't build things for the sake of building. Every step ties back to what you're trying to accomplish." },
               { title: 'Iterative', desc: 'Regular check-ins mean we catch problems early and adjust before they get expensive.' },
-              { title: 'Battle-Tested', desc: 'We&apos;ve done this 100+ times. The process works.' },
+              { title: 'Battle-Tested', desc: "We've done this 100+ times. The process works." },
             ].map((item, i) => (
               <div key={i} className="bg-[#161617] rounded-2xl p-8 md:p-10 hover:bg-[#1c1c1e] transition-colors text-center">
                 <div className="text-4xl md:text-5xl font-bold gradient-text-blue tracking-[-0.03em] mb-5">
