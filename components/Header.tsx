@@ -23,8 +23,8 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'frosted-glass border-b border-white/[0.08]'
+        scrolled || mobileMenuOpen
+          ? 'bg-black/95 backdrop-blur-xl border-b border-white/[0.08]'
           : 'bg-transparent'
       }`}
     >
