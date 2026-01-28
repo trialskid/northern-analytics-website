@@ -25,13 +25,13 @@ export default function About() {
       <section className="bg-apple-black section-divider py-24 md:py-36">
         <div className="mx-auto max-w-[680px] px-4 sm:px-6 lg:px-8">
           <p className="text-xl md:text-2xl text-apple-light/80 leading-relaxed mb-8 font-light">
-            Northern Analytics was started by Jamey Gulley. He&apos;s spent over five years building BI and automation solutions in Oil &amp; Gas and enterprise settings.
+            Northern Analytics was started by Jamey Gulley. He has spent over five years building BI and automation solutions in Oil &amp; Gas and enterprise settings.
           </p>
           <p className="text-xl md:text-2xl text-apple-light/80 leading-relaxed mb-8 font-light">
-            Over that time, he&apos;s shipped 100+ projects on the Microsoft Power Platform, replacing manual busywork with automated workflows. His clients save over 2,000 hours a month combined.
+            Over that time, he shipped 100+ projects on the Microsoft Power Platform, replacing manual busywork with automated workflows. His clients save over 2,000 hours a month combined.
           </p>
           <p className="text-xl md:text-2xl text-apple-light/80 leading-relaxed font-light">
-            In 2025, he launched Northern Analytics. The idea was simple: smaller businesses deserve the same quality of automation and analytics that big companies get. We build solutions that save time, surface the numbers that matter, and don&apos;t require hiring more people to maintain.
+            In 2025, he launched Northern Analytics. The idea was simple: smaller businesses deserve the same quality of automation and analytics that big companies get. We build solutions that save time, surface the numbers that matter, and run without needing extra people to maintain.
           </p>
         </div>
       </section>
@@ -102,9 +102,9 @@ export default function About() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-1">
             {[
-              { title: 'Results-Driven', desc: 'If it doesn&apos;t save you time or money, we haven&apos;t done our job.' },
+              { title: 'Results-Driven', desc: "If it doesn't save you time or money, we haven't done our job." },
               { title: 'Business-First', desc: 'We start with your problem, not the technology. The tech is just how we solve it.' },
-              { title: 'Efficiency-Focused', desc: 'Every solution we build is designed to get rid of wasted time.' },
+              { title: 'Efficient', desc: 'Every solution we build is designed to get rid of wasted time.' },
               { title: 'No Hand-Off', desc: 'We teach your team to run things without us. The goal is independence, not dependency.' },
             ].map((value, i) => (
               <div key={i} className="bg-[#161617] rounded-2xl p-8 md:p-10 hover:bg-[#1c1c1e] transition-colors">
@@ -132,7 +132,7 @@ export default function About() {
                 Deep Microsoft Power Platform expertise.
               </h2>
               <p className="text-xl text-apple-gray mb-10 font-light leading-relaxed">
-                We&apos;ve worked with every part of the Microsoft Power Platform. The solutions we build are solid, follow Microsoft&apos;s recommended patterns, and won&apos;t fall apart when you need to change something.
+                We have worked with every part of the Microsoft Power Platform. The solutions we build are solid, follow Microsoft recommended patterns, and hold up when you need to change something.
               </p>
               <div className="space-y-4">
                 {[
