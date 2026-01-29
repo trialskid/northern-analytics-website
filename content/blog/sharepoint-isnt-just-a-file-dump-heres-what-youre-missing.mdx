@@ -1,0 +1,55 @@
+---
+title: "SharePoint isn't just a file dump (here's what you're missing)"
+description: "Most companies use SharePoint like a network drive with a browser. That's about 20% of what it can do. Here's what you're leaving on the table."
+date: "2025-01-06"
+tags: ["sharepoint", "document-management", "automation"]
+---
+
+I can usually tell how a company uses SharePoint within five minutes of looking at their setup. There's a document library called "Shared Documents" with 4,000 files in it, no consistent naming, folders nested six levels deep, and half the team has given up and just emails files to each other instead.
+
+Sound familiar? You're not alone. And you're using maybe 20 percent of what SharePoint can actually do.
+
+## The file dump problem
+
+When companies migrate from a network drive to SharePoint, they usually just move the files over and call it done. Same chaos, different location. The only thing that changed is the URL.
+
+This misses the entire point. SharePoint isn't a file server with a web interface. It's a platform for managing information, automating document workflows, and making sure the right people see the right things at the right time.
+
+The difference between a file dump and a document management system is structure. And structure is what most SharePoint deployments are missing.
+
+## Metadata changes everything
+
+Here's the single biggest upgrade you can make: stop organizing documents with folders and start using metadata columns.
+
+Instead of putting an invoice in Clients > Acme Corp > 2024 > Invoices > January, you tag it with a client name, document type, date, and status. Now you can filter, sort, and search by any of those fields. Want to see all unpaid invoices across every client? One click. Want every contract that expires in the next 90 days? One click.
+
+Folders give you one way to find a document. Metadata gives you dozens.
+
+Setting up metadata columns takes a few hours. The return is permanent. Every document that goes in from that point forward is findable, filterable, and useful.
+
+## Automate the boring parts
+
+This is where SharePoint starts earning real money. When you combine document libraries with Power Automate, things get interesting fast.
+
+Here are workflows I've built for clients that run every single day without anyone thinking about them:
+
+- **Document approval routing.** Upload a document, it automatically goes to the right approver based on the document type and value. Approved documents get moved to a final library. Rejected ones go back to the author with comments.
+- **Expiration alerts.** Contracts, certifications, and licenses have expiration dates in their metadata. Power Automate checks daily and sends alerts 90, 60, and 30 days before expiration. No more scrambling when something lapses.
+- **Automatic naming and filing.** When a document gets uploaded, a flow reads its metadata and renames it to match your naming convention. No more "Final_v2_REAL_final.docx."
+- **External sharing management.** When someone shares a document externally, the flow logs it, notifies a manager, and automatically revokes access after 30 days unless it's renewed.
+
+None of these are complex. Each one takes a day or two to set up. But they eliminate hours of manual work and the mistakes that come with it.
+
+## Lists are underrated
+
+SharePoint lists are basically lightweight databases that anyone can build. I've seen teams replace entire tracking spreadsheets with SharePoint lists that multiple people can edit simultaneously, with version history, permissions, and automated notifications built in.
+
+Project trackers, issue logs, asset inventories, training records. If you're managing it in Excel and more than one person touches it, a SharePoint list is almost always better.
+
+## Start with one library
+
+You don't need to restructure your entire SharePoint environment overnight. Pick one document library that causes the most frustration. Add metadata columns. Build one automation. Let people experience what it feels like when documents manage themselves.
+
+The reaction is usually something like, "Why didn't we do this three years ago?" And from there, the rest of the organization starts asking for the same treatment.
+
+If you want help figuring out where to start, that's literally what we do. We'll look at your SharePoint setup, identify the quick wins, and build them out. Most companies see results inside of two weeks.
