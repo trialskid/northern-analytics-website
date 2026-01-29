@@ -35,7 +35,7 @@ export default function Schema() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Northern Analytics',
-    image: 'https://northern-analytics.com/logo.png',
+    // image: 'https://northern-analytics.com/logo.png', // TODO: add logo file
     '@id': 'https://northern-analytics.com',
     url: 'https://northern-analytics.com',
     email: 'contact@northern-analytics.com',
@@ -52,7 +52,7 @@ export default function Schema() {
       latitude: 56.7267,
       longitude: -111.3790,
     },
-    sameAs: [],
+    sameAs: ['https://www.linkedin.com/company/northern-analytics-ca/'],
   };
 
   return (
