@@ -24,14 +24,14 @@ export default function Services() {
       </section>
 
       {/* Services */}
-      <section className="bg-apple-black section-divider">
-        <div className="mx-auto max-w-[980px] px-4 sm:px-6 lg:px-8">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className={`py-24 md:py-32 ${index < services.length - 1 ? 'section-divider' : ''}`}
-            >
-              <div className={`grid md:grid-cols-2 gap-16 md:gap-20 items-start ${index % 2 === 1 ? '' : ''}`}>
+      {services.map((service, index) => (
+        <section
+          key={index}
+          className={`${index % 2 === 0 ? 'bg-apple-black' : 'bg-black'} section-divider`}
+        >
+          <div className="mx-auto max-w-[980px] px-4 sm:px-6 lg:px-8">
+            <div className="py-24 md:py-32">
+              <div className={`grid md:grid-cols-2 gap-16 md:gap-20 items-start`}>
                 <div className={index % 2 === 1 ? 'md:order-2' : ''}>
                   <div className="text-apple-blue mb-6">{getServiceIcon(service.icon, 'w-10 h-10')}</div>
                   <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-apple-light tracking-[-0.02em] mb-4 leading-[1.1]">
@@ -69,12 +69,12 @@ export default function Services() {
                 </div>
               </div>
             </div>
-          ))}
-        </div>
-      </section>
+          </div>
+        </section>
+      ))}
 
       {/* CTA */}
-      <section className="bg-black section-divider py-28 md:py-40">
+      <section className="bg-apple-black section-divider py-28 md:py-40">
         <div className="mx-auto max-w-[980px] px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl sm:text-5xl md:text-[64px] font-bold tracking-[-0.03em] text-apple-light leading-[1.05] mb-6">
             Ready to <span className="gradient-text">transform</span> your business?
