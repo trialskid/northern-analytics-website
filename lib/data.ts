@@ -79,7 +79,7 @@ export const services = [
   },
 ];
 
-export const serviceIcons: Record<string, JSX.Element> = {};
+export const serviceIcons: Record<string, import('react').ReactElement> = {};
 
 // Navigation links shared between Header and Footer
 export const navigation = [

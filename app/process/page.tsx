@@ -188,7 +188,7 @@ export default function Process() {
       ))}
 
       {/* Why it works */}
-      <section className="bg-apple-black section-divider py-24 md:py-36">
+      <section className="bg-black section-divider py-24 md:py-36">
         <div className="mx-auto max-w-[980px] px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-[-0.03em] text-apple-light text-center mb-16 md:mb-24">
             Why it works.
