@@ -50,7 +50,7 @@ export default function Home() {
                 <div className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-[-0.04em] text-apple-light mb-2">
                   {stat.value}
                 </div>
-                <div className="text-apple-gray text-sm md:text-base font-medium">
+                <div className="text-apple-gray text-base font-medium">
                   {stat.label}
                 </div>
               </div>
@@ -75,13 +75,13 @@ export default function Home() {
             {services.map((service, i) => (
               <div
                 key={i}
-                className="bg-[#161617] rounded-2xl p-8 md:p-10 hover:bg-[#1c1c1e] transition-colors"
+                className="bg-[#161617] rounded-2xl p-8 md:p-10 hover:bg-[#1c1c1e] transition-colors flex flex-col"
               >
                 <div className="text-apple-blue mb-5">{getServiceIcon(service.icon)}</div>
                 <h3 className="text-xl md:text-2xl font-semibold text-apple-light mb-3 tracking-[-0.01em]">
                   {service.title}
                 </h3>
-                <p className="text-apple-gray text-base leading-relaxed">
+                <p className="text-apple-gray text-base leading-relaxed flex-1">
                   {service.tagline}
                 </p>
               </div>
@@ -111,7 +111,7 @@ export default function Home() {
               <p className="text-xl text-apple-gray mb-10 font-light leading-relaxed">
                 We know the tech inside and out, and we understand how your business actually runs. That combination is rare.
               </p>
-              <div className="space-y-6">
+              <div className="space-y-5">
                 {[
                   'Reduce manual work by up to 80%',
                   'Scale processes without proportional staff increases',
@@ -169,17 +169,17 @@ export default function Home() {
               { num: '03', title: 'Development & Testing', desc: 'Agile sprints, UAT, and performance benchmarking.', time: '2-8 weeks' },
               { num: '04', title: 'Deployment & Training', desc: 'Go-live support, hand-over, success metrics dashboard.', time: '1 week' },
             ].map((step, i) => (
-              <div key={i} className="bg-[#161617] rounded-2xl p-8 md:p-10 hover:bg-[#1c1c1e] transition-colors">
+              <div key={i} className="bg-[#161617] rounded-2xl p-8 md:p-10 hover:bg-[#1c1c1e] transition-colors flex flex-col">
                 <div className="text-5xl md:text-6xl font-bold gradient-text-blue tracking-[-0.04em] mb-6">
                   {step.num}
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold text-apple-light mb-2 tracking-[-0.01em]">
                   {step.title}
                 </h3>
-                <p className="text-apple-gray text-sm leading-relaxed mb-4">
+                <p className="text-apple-gray text-sm leading-relaxed mb-4 flex-1">
                   {step.desc}
                 </p>
-                <p className="text-apple-blue text-xs font-medium uppercase tracking-wider">
+                <p className="text-apple-blue text-xs font-medium uppercase tracking-wider mt-auto">
                   {step.time}
                 </p>
               </div>

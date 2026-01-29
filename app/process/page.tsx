@@ -199,14 +199,14 @@ export default function Process() {
               { title: 'Iterative', desc: 'Regular check-ins mean we catch problems early and adjust before they get expensive.' },
               { title: 'Battle-Tested', desc: "We've done this 100+ times. The process works." },
             ].map((item, i) => (
-              <div key={i} className="bg-[#161617] rounded-2xl p-8 md:p-10 hover:bg-[#1c1c1e] transition-colors text-center">
+              <div key={i} className="bg-[#161617] rounded-2xl p-8 md:p-10 hover:bg-[#1c1c1e] transition-colors text-center flex flex-col">
                 <div className="text-4xl md:text-5xl font-bold gradient-text-blue tracking-[-0.03em] mb-5">
                   0{i + 1}
                 </div>
                 <h3 className="text-xl font-semibold text-apple-light mb-3 tracking-[-0.01em]">
                   {item.title}
                 </h3>
-                <p className="text-apple-gray text-base leading-relaxed">
+                <p className="text-apple-gray text-base leading-relaxed flex-1">
                   {item.desc}
                 </p>
               </div>

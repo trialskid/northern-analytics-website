@@ -33,7 +33,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="py-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 text-xs text-apple-gray/70">
+        <div className="py-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 text-xs text-apple-gray/80">
           <p>Copyright &copy; {currentYear} Northern Analytics. All rights reserved.</p>
           <div className="flex gap-x-5">
             {legal.map((link) => (

@@ -49,7 +49,7 @@ export default function About() {
                 <div className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-[-0.04em] text-apple-light mb-2">
                   {stat.value}
                 </div>
-                <div className="text-apple-gray text-sm md:text-base font-medium">
+                <div className="text-apple-gray text-base font-medium">
                   {stat.label}
                 </div>
               </div>
@@ -107,14 +107,14 @@ export default function About() {
               { title: 'Efficient', desc: 'Every solution we build is designed to get rid of wasted time.' },
               { title: 'No Hand-Off', desc: 'We teach your team to run things without us. The goal is independence, not dependency.' },
             ].map((value, i) => (
-              <div key={i} className="bg-[#161617] rounded-2xl p-8 md:p-10 hover:bg-[#1c1c1e] transition-colors">
+              <div key={i} className="bg-[#161617] rounded-2xl p-8 md:p-10 hover:bg-[#1c1c1e] transition-colors flex flex-col">
                 <div className="text-3xl md:text-4xl font-bold gradient-text-blue tracking-[-0.03em] mb-4">
                   0{i + 1}
                 </div>
                 <h3 className="text-xl font-semibold text-apple-light mb-3 tracking-[-0.01em]">
                   {value.title}
                 </h3>
-                <p className="text-apple-gray text-base leading-relaxed">
+                <p className="text-apple-gray text-base leading-relaxed flex-1">
                   {value.desc}
                 </p>
               </div>

@@ -2,7 +2,7 @@
 
 @theme {
   --color-apple-black: #1d1d1f;
-  --color-apple-gray: #86868b;
+  --color-apple-gray: #98989d;
   --color-apple-light: #f5f5f7;
   --color-apple-blue: #2997ff;
   --color-apple-purple: #a855f7;
@@ -92,10 +92,10 @@ a, button {
 .pill-button-secondary {
   background: transparent;
   color: #2997ff;
-  border: 1px solid rgba(41, 151, 255, 0.3);
+  border: 1.5px solid rgba(41, 151, 255, 0.4);
 }
 
 .pill-button-secondary:hover {
-  background: rgba(41, 151, 255, 0.08);
-  border-color: rgba(41, 151, 255, 0.5);
+  background: rgba(41, 151, 255, 0.1);
+  border-color: rgba(41, 151, 255, 0.6);
 }

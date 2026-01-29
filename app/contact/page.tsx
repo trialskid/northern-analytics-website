@@ -49,7 +49,7 @@ export default function Contact() {
       {/* Contact */}
       <section className="bg-apple-black section-divider py-24 md:py-36">
         <div className="mx-auto max-w-[980px] px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-16 md:gap-20">
+          <div className="grid md:grid-cols-2 gap-16 md:gap-20 items-start">
             {/* Contact Form */}
             <div>
               <h2 className="text-2xl md:text-3xl font-bold text-apple-light tracking-[-0.02em] mb-6">
@@ -78,7 +78,7 @@ export default function Contact() {
                       required
                       value={name}
                       onChange={(e) => setName(e.target.value)}
-                      className="w-full bg-[#161617] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-apple-blue focus:border-transparent transition-all"
+                      className="w-full bg-[#161617] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-apple-blue focus:border-transparent transition-all"
                       placeholder="Your name"
                     />
                   </div>
@@ -91,7 +91,7 @@ export default function Contact() {
                       required
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full bg-[#161617] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-apple-blue focus:border-transparent transition-all"
+                      className="w-full bg-[#161617] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-apple-blue focus:border-transparent transition-all"
                       placeholder="you@company.com"
                     />
                   </div>
@@ -103,7 +103,7 @@ export default function Contact() {
                       name="company"
                       value={company}
                       onChange={(e) => setCompany(e.target.value)}
-                      className="w-full bg-[#161617] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-apple-blue focus:border-transparent transition-all"
+                      className="w-full bg-[#161617] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-apple-blue focus:border-transparent transition-all"
                       placeholder="Your company"
                     />
                   </div>
@@ -116,7 +116,7 @@ export default function Contact() {
                       rows={5}
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
-                      className="w-full bg-[#161617] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-apple-blue focus:border-transparent transition-all resize-none"
+                      className="w-full bg-[#161617] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-apple-blue focus:border-transparent transition-all resize-none"
                       placeholder="Tell us about your project or challenge..."
                     />
                   </div>
