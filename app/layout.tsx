@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     siteName: 'Northern Analytics',
     title: 'Northern Analytics | Power BI, Power Automate & Power Platform Consulting',
     description: 'Microsoft Power Platform consulting in Fort McMurray, AB. Expert Power BI dashboards, Power Automate workflows, and custom Power Apps that save 2,000+ hours monthly.',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Northern Analytics - Consulting, Automation, Data' }],
   },
   twitter: {
     card: 'summary_large_image',
