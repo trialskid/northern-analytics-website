@@ -127,13 +127,13 @@ export default function Process() {
       </section>
 
       {/* Detailed Steps */}
-      <section className="bg-black section-divider">
-        <div className="mx-auto max-w-[980px] px-4 sm:px-6 lg:px-8">
-          {steps.map((step, index) => (
-            <div
-              key={index}
-              className={`py-24 md:py-32 ${index < steps.length - 1 ? 'section-divider' : ''}`}
-            >
+      {steps.map((step, index) => (
+        <section
+          key={index}
+          className={`${index % 2 === 0 ? 'bg-black' : 'bg-apple-black'} section-divider`}
+        >
+          <div className="mx-auto max-w-[980px] px-4 sm:px-6 lg:px-8">
+            <div className="py-24 md:py-32">
               {/* Step header */}
               <div className="mb-12 md:mb-16">
                 <div className="text-apple-blue text-xs font-medium uppercase tracking-widest mb-3">
@@ -183,9 +183,9 @@ export default function Process() {
                 </div>
               </div>
             </div>
-          ))}
-        </div>
-      </section>
+          </div>
+        </section>
+      ))}
 
       {/* Why it works */}
       <section className="bg-apple-black section-divider py-24 md:py-36">
