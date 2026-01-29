@@ -22,11 +22,11 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Emphasis text - bold white */
+/* Emphasis text - accent blue */
 .gradient-text,
 .gradient-text-blue,
 .gradient-text-subtle {
-  color: #f5f5f7;
+  color: #2997ff;
 }
 
 /* Frosted glass */
