@@ -1,9 +1,11 @@
 'use client';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 
 export default function Header() {
+  const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -30,7 +32,7 @@ export default function Header() {
       }`}
     >
       <nav className="mx-auto max-w-[980px] px-4 sm:px-6 lg:px-8" aria-label="Top">
-        <div className="flex h-12 items-center justify-between">
+        <div className="flex h-14 items-center justify-between">
           <Link
             href="/"
             className="text-lg font-semibold text-apple-light/90 hover:text-white transition-colors"
@@ -44,7 +46,9 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-xs font-normal text-apple-gray hover:text-white transition-colors"
+                className={`text-sm font-normal transition-colors ${
+                  pathname === item.href ? 'text-white' : 'text-apple-gray hover:text-white'
+                }`}
               >
                 {item.name}
               </Link>
@@ -84,7 +88,9 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="block px-3 py-2 text-sm text-apple-gray hover:text-white transition-colors"
+                className={`block px-3 py-2 text-sm transition-colors ${
+                  pathname === item.href ? 'text-white' : 'text-apple-gray hover:text-white'
+                }`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item.name}

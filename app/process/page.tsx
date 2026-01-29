@@ -193,7 +193,7 @@ export default function Process() {
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-[-0.03em] text-apple-light text-center mb-16 md:mb-24">
             Why it works.
           </h2>
-          <div className="grid md:grid-cols-3 gap-1">
+          <div className="grid md:grid-cols-3 gap-4">
             {[
               { title: 'Goal-Oriented', desc: "We don't build things for the sake of building. Every step ties back to what you're trying to accomplish." },
               { title: 'Iterative', desc: 'Regular check-ins mean we catch problems early and adjust before they get expensive.' },

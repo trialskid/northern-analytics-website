@@ -39,7 +39,7 @@ export default function About() {
       {/* Stats */}
       <section className="bg-black section-divider py-24 md:py-32">
         <div className="mx-auto max-w-[980px] px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             {[
               { value: '100+', label: 'Projects Completed' },
               { value: '2,000+', label: 'Hours Saved Monthly' },
@@ -100,7 +100,7 @@ export default function About() {
             What we believe.
           </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-1">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               { title: 'Results-Driven', desc: "If it doesn't save you time or money, we haven't done our job." },
               { title: 'Business-First', desc: 'We start with your problem, not the technology. The tech is just how we solve it.' },

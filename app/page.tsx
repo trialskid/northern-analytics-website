@@ -71,7 +71,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {services.map((service, i) => (
               <div
                 key={i}
@@ -162,7 +162,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               { num: '01', title: 'Discovery & Analysis', desc: 'Map processes, align KPIs.', time: '1-2 weeks' },
               { num: '02', title: 'Solution Design', desc: 'Design the right Power Platform solution for your needs.', time: '1 week' },

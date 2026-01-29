@@ -32,7 +32,7 @@ export default function Blog() {
               <p className="text-apple-gray text-xl">Posts coming soon.</p>
             </div>
           ) : (
-            <div className="space-y-1">
+            <div className="space-y-4">
               {posts.map((post) => (
                 <Link
                   key={post.slug}
@@ -81,6 +81,24 @@ export default function Blog() {
               ))}
             </div>
           )}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-black section-divider py-28 md:py-40">
+        <div className="mx-auto max-w-[980px] px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl sm:text-5xl md:text-[64px] font-bold tracking-[-0.03em] text-apple-light leading-[1.05] mb-6">
+            Ready to <span className="gradient-text">automate?</span>
+          </h2>
+          <p className="text-xl text-apple-gray max-w-2xl mx-auto font-light leading-relaxed mb-10">
+            Stop reading about it and start doing it. Book a free 30-minute consultation.
+          </p>
+          <Link href="/contact" className="pill-button pill-button-primary">
+            Get started
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
         </div>
       </section>
     </>

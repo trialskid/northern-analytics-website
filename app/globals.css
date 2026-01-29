@@ -92,9 +92,10 @@ a, button {
 .pill-button-secondary {
   background: transparent;
   color: #2997ff;
-  border: none;
+  border: 1px solid rgba(41, 151, 255, 0.3);
 }
 
 .pill-button-secondary:hover {
-  text-decoration: underline;
+  background: rgba(41, 151, 255, 0.08);
+  border-color: rgba(41, 151, 255, 0.5);
 }
