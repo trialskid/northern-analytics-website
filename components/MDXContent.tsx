@@ -1,9 +1,6 @@
-'use client';
-
-import { useEffect, useState } from 'react';
-
-// Simple markdown-to-HTML renderer for blog posts
+// Server-side markdown renderer for blog posts
 // Handles: headings, paragraphs, bold, italic, links, lists, code blocks, inline code, blockquotes, horizontal rules
+
 function markdownToHtml(md: string): string {
   let html = md;
 
@@ -56,11 +53,7 @@ function markdownToHtml(md: string): string {
 }
 
 export default function MDXContent({ content }: { content: string }) {
-  const [html, setHtml] = useState('');
-
-  useEffect(() => {
-    setHtml(markdownToHtml(content));
-  }, [content]);
+  const html = markdownToHtml(content);
 
   return (
     <article
