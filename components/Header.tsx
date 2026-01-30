@@ -2,18 +2,57 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 
 export default function Header() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Focus trap for mobile menu
+  const handleMenuKeyDown = useCallback((e: KeyboardEvent) => {
+    if (!mobileMenuOpen) return;
+    if (e.key === 'Escape') {
+      setMobileMenuOpen(false);
+      menuButtonRef.current?.focus();
+      return;
+    }
+    if (e.key !== 'Tab') return;
+    const menu = mobileMenuRef.current;
+    if (!menu) return;
+    const focusable = menu.querySelectorAll<HTMLElement>('a, button');
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  }, [mobileMenuOpen]);
+
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.addEventListener('keydown', handleMenuKeyDown);
+      // Prevent body scroll
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.removeEventListener('keydown', handleMenuKeyDown);
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen, handleMenuKeyDown]);
 
   const navigation = [
     { name: 'Services', href: '/services' },
@@ -58,6 +97,7 @@ export default function Header() {
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
+              ref={menuButtonRef}
               type="button"
               className="text-apple-gray hover:text-white p-2 transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -83,7 +123,7 @@ export default function Header() {
 
         {/* Mobile menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-3 space-y-1 border-t border-white/[0.08]">
+          <div ref={mobileMenuRef} role="dialog" aria-modal="true" aria-label="Navigation menu" className="md:hidden py-3 space-y-1 border-t border-white/[0.08]">
             {navigation.map((item) => (
               <Link
                 key={item.name}

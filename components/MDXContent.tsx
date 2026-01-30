@@ -1,63 +1,43 @@
-// Server-side markdown renderer for blog posts
-// Handles: headings, paragraphs, bold, italic, links, lists, code blocks, inline code, blockquotes, horizontal rules
+import { unified } from 'unified';
+import remarkParse from 'remark-parse';
+import remarkGfm from 'remark-gfm';
+import remarkRehype from 'remark-rehype';
+import rehypeRaw from 'rehype-raw';
+import rehypeStringify from 'rehype-stringify';
 
-function markdownToHtml(md: string): string {
-  let html = md;
+async function markdownToHtml(markdown: string): Promise<string> {
+  const result = await unified()
+    .use(remarkParse)
+    .use(remarkGfm)
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeRaw)
+    .use(rehypeStringify)
+    .process(markdown);
 
-  // Code blocks (``` ... ```)
-  html = html.replace(/```(\w*)\n([\s\S]*?)```/g, (_match, _lang, code) => {
-    return `<pre class="bg-[#161617] rounded-2xl p-6 overflow-x-auto my-6"><code class="text-sm text-apple-light/80">${code.replace(/</g, '&lt;').replace(/>/g, '&gt;').trim()}</code></pre>`;
-  });
-
-  // Inline code
-  html = html.replace(/`([^`]+)`/g, '<code class="bg-[#161617] text-apple-blue px-1.5 py-0.5 rounded text-sm">$1</code>');
-
-  // Headings
-  html = html.replace(/^### (.+)$/gm, '<h3 class="text-2xl font-bold text-apple-light mt-12 mb-4 tracking-[-0.02em]">$1</h3>');
-  html = html.replace(/^## (.+)$/gm, '<h2 class="text-3xl md:text-4xl font-bold text-apple-light mt-16 mb-6 tracking-[-0.02em]">$1</h2>');
-  html = html.replace(/^# (.+)$/gm, '<h1 class="text-4xl md:text-5xl font-bold text-apple-light mt-16 mb-6 tracking-[-0.03em]">$1</h1>');
-
-  // Blockquotes
-  html = html.replace(/^> (.+)$/gm, '<blockquote class="border-l-2 border-apple-blue pl-6 my-6 text-apple-gray italic">$1</blockquote>');
-
-  // Horizontal rules
-  html = html.replace(/^---$/gm, '<hr class="border-white/[0.08] my-12" />');
-
-  // Bold and italic
-  html = html.replace(/\*\*\*(.+?)\*\*\*/g, '<strong class="text-apple-light"><em>$1</em></strong>');
-  html = html.replace(/\*\*(.+?)\*\*/g, '<strong class="text-apple-light">$1</strong>');
-  html = html.replace(/\*(.+?)\*/g, '<em>$1</em>');
-
-  // Links
-  html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-apple-blue hover:underline">$1</a>');
-
-  // Unordered lists
-  html = html.replace(/^(\s*)[-*] (.+)$/gm, '$1<li class="flex items-start gap-3 mb-2"><span class="text-apple-blue mt-2 flex-shrink-0">•</span><span>$2</span></li>');
-
-  // Ordered lists
-  html = html.replace(/^(\d+)\. (.+)$/gm, '<li class="flex items-start gap-3 mb-2"><span class="text-apple-blue font-medium flex-shrink-0">$1.</span><span>$2</span></li>');
-
-  // Wrap consecutive <li> in <ul>
-  html = html.replace(/((?:<li[^>]*>.*<\/li>\n?)+)/g, '<ul class="my-6 space-y-1">$1</ul>');
-
-  // Paragraphs - wrap remaining lines that aren't already HTML
-  const lines = html.split('\n');
-  const processed = lines.map((line) => {
-    const trimmed = line.trim();
-    if (!trimmed) return '';
-    if (trimmed.startsWith('<')) return line;
-    return `<p class="text-apple-light/70 text-lg leading-relaxed mb-6">${trimmed}</p>`;
-  });
-
-  return processed.join('\n');
+  return String(result);
 }
 
-export default function MDXContent({ content }: { content: string }) {
-  const html = markdownToHtml(content);
+export default async function MDXContent({ content }: { content: string }) {
+  const html = await markdownToHtml(content);
 
   return (
     <article
-      className="prose-custom max-w-none"
+      className="prose-custom max-w-none
+        [&_h1]:text-4xl [&_h1]:md:text-5xl [&_h1]:font-bold [&_h1]:text-apple-light [&_h1]:mt-16 [&_h1]:mb-6 [&_h1]:tracking-[-0.03em]
+        [&_h2]:text-3xl [&_h2]:md:text-4xl [&_h2]:font-bold [&_h2]:text-apple-light [&_h2]:mt-16 [&_h2]:mb-6 [&_h2]:tracking-[-0.02em]
+        [&_h3]:text-2xl [&_h3]:font-bold [&_h3]:text-apple-light [&_h3]:mt-12 [&_h3]:mb-4 [&_h3]:tracking-[-0.02em]
+        [&_p]:text-apple-light/70 [&_p]:text-lg [&_p]:leading-relaxed [&_p]:mb-6
+        [&_a]:text-apple-blue [&_a]:hover:underline
+        [&_strong]:text-apple-light
+        [&_blockquote]:border-l-2 [&_blockquote]:border-apple-blue [&_blockquote]:pl-6 [&_blockquote]:my-6 [&_blockquote]:text-apple-gray [&_blockquote]:italic
+        [&_ul]:my-6 [&_ul]:space-y-2 [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:marker:text-apple-blue
+        [&_ol]:my-6 [&_ol]:space-y-2 [&_ol]:list-decimal [&_ol]:pl-6 [&_ol]:marker:text-apple-blue
+        [&_li]:text-apple-light/70 [&_li]:text-lg [&_li]:leading-relaxed
+        [&_pre]:bg-[#161617] [&_pre]:rounded-2xl [&_pre]:p-6 [&_pre]:overflow-x-auto [&_pre]:my-6
+        [&_pre_code]:text-sm [&_pre_code]:text-apple-light/80
+        [&_code]:bg-[#161617] [&_code]:text-apple-blue [&_code]:px-1.5 [&_code]:py-0.5 [&_code]:rounded [&_code]:text-sm
+        [&_pre_code]:bg-transparent [&_pre_code]:p-0
+        [&_hr]:border-white/[0.08] [&_hr]:my-12"
       dangerouslySetInnerHTML={{ __html: html }}
     />
   );
