@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect, useRef, useCallback } from 'react';
+import { navigation } from '@/lib/data';
 
 export default function Header() {
   const pathname = usePathname();
@@ -54,14 +55,6 @@ export default function Header() {
     };
   }, [mobileMenuOpen, handleMenuKeyDown]);
 
-  const navigation = [
-    { name: 'Services', href: '/services' },
-    { name: 'Process', href: '/process' },
-    { name: 'About', href: '/about' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' },
-  ];
-
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -110,6 +103,7 @@ export default function Header() {
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
+                aria-hidden="true"
               >
                 {mobileMenuOpen ? (
                   <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />

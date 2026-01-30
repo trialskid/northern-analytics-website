@@ -41,7 +41,7 @@ export default function ContactForm() {
   if (status === 'success') {
     return (
       <div className="rounded-2xl border border-apple-blue/30 bg-apple-blue/10 px-6 py-10 text-center">
-        <svg className="w-10 h-10 text-apple-blue mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <svg className="w-10 h-10 text-apple-blue mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true">
           <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
         <h3 className="text-xl font-semibold text-apple-light mb-2">Thank you!</h3>
@@ -116,7 +116,7 @@ export default function ContactForm() {
 
       <button type="submit" disabled={status === 'submitting'} className="pill-button pill-button-primary disabled:opacity-50">
         {status === 'submitting' ? 'Sending...' : 'Send message'}
-        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
           <path strokeLinecap="round" strokeLinejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
         </svg>
       </button>

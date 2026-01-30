@@ -1,15 +1,9 @@
 import Link from 'next/link';
+import { navigation } from '@/lib/data';
 
 export default function Footer() {
+  // Year is evaluated at build time; updates on each rebuild.
   const currentYear = new Date().getFullYear();
-
-  const links = [
-    { name: 'Services', href: '/services' },
-    { name: 'Process', href: '/process' },
-    { name: 'About', href: '/about' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' },
-  ];
 
   const legal = [
     { name: 'Privacy Policy', href: '/legal/privacy' },
@@ -21,7 +15,7 @@ export default function Footer() {
       <div className="mx-auto max-w-[980px] px-4 sm:px-6 lg:px-8">
         {/* Links */}
         <div className="py-4 flex flex-wrap gap-x-6 gap-y-2 text-xs text-apple-gray border-b border-white/[0.08]">
-          {links.map((link) => (
+          {navigation.map((link) => (
             <Link key={link.name} href={link.href} className="hover:text-white transition-colors">
               {link.name}
             </Link>

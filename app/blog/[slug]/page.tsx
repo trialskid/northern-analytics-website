@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { ChevronRight } from '@/components/Icons';
 import { getAllSlugs, getPostBySlug } from '@/lib/blog';
 import MDXContent from '@/components/MDXContent';
 import { notFound } from 'next/navigation';
@@ -44,7 +45,7 @@ export default async function BlogPost({ params }: Props) {
             href="/blog"
             className="inline-flex items-center gap-2 text-apple-blue text-sm mb-8 hover:underline"
           >
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
             </svg>
             Back to blog
@@ -103,9 +104,7 @@ export default async function BlogPost({ params }: Props) {
           </p>
           <Link href="/contact" className="pill-button pill-button-primary">
             Book a consultation
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-            </svg>
+            <ChevronRight />
           </Link>
         </div>
       </section>

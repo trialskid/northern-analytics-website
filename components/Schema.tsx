@@ -41,10 +41,8 @@ export default function Schema() {
     email: 'contact@northern-analytics.com',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '',
       addressLocality: 'Fort McMurray',
       addressRegion: 'AB',
-      postalCode: '',
       addressCountry: 'CA',
     },
     geo: {

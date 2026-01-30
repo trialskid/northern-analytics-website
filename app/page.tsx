@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { services } from '@/lib/data';
-import { getServiceIcon, ChevronRight, CheckIcon } from '@/components/Icons';
+import { getServiceIcon, ChevronRight } from '@/components/Icons';
 
 export default function Home() {
   return (
@@ -22,15 +22,11 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link href="/contact" className="pill-button pill-button-primary">
               Book a consultation
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-              </svg>
+              <ChevronRight />
             </Link>
             <Link href="/services" className="pill-button pill-button-secondary">
               Explore services
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-              </svg>
+              <ChevronRight />
             </Link>
           </div>
         </div>
@@ -91,9 +87,7 @@ export default function Home() {
           <div className="text-center mt-14">
             <Link href="/services" className="pill-button pill-button-secondary">
               Learn more about our services
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-              </svg>
+              <ChevronRight />
             </Link>
           </div>
         </div>
@@ -122,7 +116,7 @@ export default function Home() {
                 ].map((benefit, i) => (
                   <div key={i} className="flex items-start gap-4">
                     <div className="w-5 h-5 mt-0.5 rounded-full bg-apple-blue/20 flex items-center justify-center flex-shrink-0">
-                      <svg className="w-3 h-3 text-apple-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                      <svg className="w-3 h-3 text-apple-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3} aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
@@ -141,9 +135,7 @@ export default function Home() {
               </p>
               <Link href="/contact" className="pill-button pill-button-primary">
                 Schedule your consultation
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
+                <ChevronRight />
               </Link>
             </div>
           </div>
@@ -189,9 +181,7 @@ export default function Home() {
           <div className="text-center mt-14">
             <Link href="/process" className="pill-button pill-button-secondary">
               Learn more about our process
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-              </svg>
+              <ChevronRight />
             </Link>
           </div>
         </div>
@@ -210,9 +200,7 @@ export default function Home() {
           </p>
           <Link href="/contact" className="pill-button pill-button-primary">
             Book your free consultation
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-            </svg>
+            <ChevronRight />
           </Link>
         </div>
       </section>

@@ -22,11 +22,26 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Emphasis text - accent blue */
-.gradient-text,
-.gradient-text-blue,
+/* Gradient text styles */
+.gradient-text {
+  background: linear-gradient(135deg, #2997ff 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-blue {
+  background: linear-gradient(135deg, #2997ff 0%, #14b8a6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .gradient-text-subtle {
-  color: #2997ff;
+  background: linear-gradient(135deg, #2997ff 0%, #60a5fa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* Frosted glass */
@@ -36,9 +51,10 @@ body {
   -webkit-backdrop-filter: saturate(180%) blur(20px);
 }
 
-/* Smooth transitions */
-a, button {
-  transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+/* Smooth transitions for interactive elements */
+a:not([class*="pill-button"]),
+button:not([class*="pill-button"]) {
+  transition: color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 /* Focus visible for accessibility */
