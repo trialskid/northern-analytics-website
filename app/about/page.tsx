@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ChevronRight } from '@/components/Icons';
+import CheckItem from '@/components/CheckItem';
+import { aboutStats, milestones, values, expertiseItems } from '@/lib/data';
 
 export const metadata: Metadata = {
   title: 'About - Jamey Gulley & Northern Analytics',
@@ -41,11 +43,7 @@ export default function About() {
       <section className="bg-black section-divider py-24 md:py-32">
         <div className="mx-auto max-w-[980px] px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-            {[
-              { value: '100+', label: 'Projects Completed' },
-              { value: '2,000+', label: 'Hours Saved Monthly' },
-              { value: '5+', label: 'Years Experience' },
-            ].map((stat, i) => (
+            {aboutStats.map((stat, i) => (
               <div key={i} className="text-center">
                 <div className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-[-0.04em] text-apple-light mb-2">
                   {stat.value}
@@ -67,11 +65,7 @@ export default function About() {
           </h2>
 
           <div className="max-w-[680px] mx-auto space-y-0">
-            {[
-              { year: '2020', title: 'Started in Power Platform', desc: 'Began specializing in Microsoft Power Platform in Oil & Gas industry.' },
-              { year: '2020-2025', title: '100+ Projects Delivered', desc: 'Helped organizations automate processes and build data-driven solutions.' },
-              { year: '2025', title: 'Founded Northern Analytics', desc: 'Launched to bring enterprise-grade results to businesses of any size.' },
-            ].map((milestone, i) => (
+            {milestones.map((milestone, i) => (
               <div key={i} className="relative pl-12 pb-16 last:pb-0">
                 {/* Line */}
                 {i < 2 && (
@@ -102,12 +96,7 @@ export default function About() {
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              { title: 'Results-Driven', desc: "If it doesn't save you time or money, we haven't done our job." },
-              { title: 'Business-First', desc: 'We start with your problem, not the technology. The tech is just how we solve it.' },
-              { title: 'Efficient', desc: 'Every solution we build is designed to get rid of wasted time.' },
-              { title: 'No Hand-Off', desc: 'We teach your team to run things without us. The goal is independence, not dependency.' },
-            ].map((value, i) => (
+            {values.map((value, i) => (
               <div key={i} className="bg-[#161617] rounded-2xl p-8 md:p-10 hover:bg-[#1c1c1e] transition-colors flex flex-col">
                 <div className="text-3xl md:text-4xl font-bold gradient-text-blue tracking-[-0.03em] mb-4">
                   0{i + 1}
@@ -136,21 +125,8 @@ export default function About() {
                 We have worked with every part of the Microsoft Power Platform. The solutions we build are solid, follow Microsoft recommended patterns, and hold up when you need to change something.
               </p>
               <div className="space-y-4">
-                {[
-                  'Power BI for business intelligence and analytics',
-                  'Power Automate for workflow automation',
-                  'Power Apps for custom business applications',
-                  'SharePoint for collaboration and document management',
-                  'Excel for advanced data modeling and templates',
-                ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <div className="w-5 h-5 mt-0.5 rounded-full bg-apple-blue/20 flex items-center justify-center flex-shrink-0">
-                      <svg className="w-3 h-3 text-apple-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3} aria-hidden="true">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
-                    <span className="text-apple-light/70 text-lg">{item}</span>
-                  </div>
+                {expertiseItems.map((item, i) => (
+                  <CheckItem key={i} className="text-apple-light/70 text-lg">{item}</CheckItem>
                 ))}
               </div>
             </div>

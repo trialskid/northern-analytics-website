@@ -52,7 +52,7 @@ export default async function BlogPost({ params }: Props) {
           </Link>
 
           <div className="flex items-center gap-3 mb-6">
-            <time className="text-apple-blue text-xs font-medium uppercase tracking-widest">
+            <time dateTime={post.date} className="text-apple-blue text-xs font-medium uppercase tracking-widest">
               {new Date(post.date).toLocaleDateString('en-CA', {
                 year: 'numeric',
                 month: 'long',

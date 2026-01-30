@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { services } from '@/lib/data';
 import { getServiceIcon, ChevronRight } from '@/components/Icons';
+import CheckItem from '@/components/CheckItem';
 
 export const metadata: Metadata = {
   title: 'Services - Power BI, Power Automate, Power Apps Consulting',
@@ -54,13 +55,8 @@ export default function Services() {
                   </h3>
                   <ul className="space-y-4">
                     {service.benefits.map((benefit, bi) => (
-                      <li key={bi} className="flex items-start gap-3">
-                        <div className="w-5 h-5 mt-0.5 rounded-full bg-apple-blue/20 flex items-center justify-center flex-shrink-0">
-                          <svg className="w-3 h-3 text-apple-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3} aria-hidden="true">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                          </svg>
-                        </div>
-                        <span className="text-apple-light/70 text-base leading-relaxed">{benefit}</span>
+                      <li key={bi}>
+                        <CheckItem className="text-apple-light/70 text-base leading-relaxed">{benefit}</CheckItem>
                       </li>
                     ))}
                   </ul>

@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ChevronRight } from '@/components/Icons';
+import CheckItem from '@/components/CheckItem';
+import { whyItWorks } from '@/lib/data';
 
 export const metadata: Metadata = {
   title: 'Our Process - 4-Step Power Platform Implementation',
@@ -171,13 +173,8 @@ export default function Process() {
                   </h3>
                   <ul className="space-y-4">
                     {step.deliverables.map((deliverable, di) => (
-                      <li key={di} className="flex items-start gap-3">
-                        <div className="w-5 h-5 mt-0.5 rounded-full bg-apple-blue/20 flex items-center justify-center flex-shrink-0">
-                          <svg className="w-3 h-3 text-apple-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3} aria-hidden="true">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                          </svg>
-                        </div>
-                        <span className="text-apple-light/70 text-base leading-relaxed">{deliverable}</span>
+                      <li key={di}>
+                        <CheckItem className="text-apple-light/70 text-base leading-relaxed">{deliverable}</CheckItem>
                       </li>
                     ))}
                   </ul>
@@ -195,11 +192,7 @@ export default function Process() {
             Why it works.
           </h2>
           <div className="grid md:grid-cols-3 gap-4">
-            {[
-              { title: 'Goal-Oriented', desc: "We don't build things for the sake of building. Every step ties back to what you're trying to accomplish." },
-              { title: 'Iterative', desc: 'Regular check-ins mean we catch problems early and adjust before they get expensive.' },
-              { title: 'Battle-Tested', desc: "We've done this 100+ times. The process works." },
-            ].map((item, i) => (
+            {whyItWorks.map((item, i) => (
               <div key={i} className="bg-[#161617] rounded-2xl p-8 md:p-10 hover:bg-[#1c1c1e] transition-colors text-center flex flex-col">
                 <div className="text-4xl md:text-5xl font-bold gradient-text-blue tracking-[-0.03em] mb-5">
                   0{i + 1}

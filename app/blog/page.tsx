@@ -43,7 +43,7 @@ export default function Blog() {
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-3">
-                        <time className="text-apple-blue text-xs font-medium uppercase tracking-widest">
+                        <time dateTime={post.date} className="text-apple-blue text-xs font-medium uppercase tracking-widest">
                           {new Date(post.date).toLocaleDateString('en-CA', {
                             year: 'numeric',
                             month: 'long',

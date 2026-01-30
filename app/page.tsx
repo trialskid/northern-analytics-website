@@ -1,6 +1,7 @@
 import Link from 'next/link';
-import { services } from '@/lib/data';
+import { services, stats, processSteps, homeBenefits } from '@/lib/data';
 import { getServiceIcon, ChevronRight } from '@/components/Icons';
+import CheckItem from '@/components/CheckItem';
 
 export default function Home() {
   return (
@@ -36,12 +37,7 @@ export default function Home() {
       <section className="bg-black section-divider py-20 md:py-28">
         <div className="mx-auto max-w-[980px] px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-16">
-            {[
-              { value: '100+', label: 'Projects Completed' },
-              { value: '2,000+', label: 'Hours Saved Monthly' },
-              { value: '>98%', label: 'Client Satisfaction' },
-              { value: '5+', label: 'Years Experience' },
-            ].map((stat, i) => (
+            {stats.map((stat, i) => (
               <div key={i} className="text-center">
                 <div className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-[-0.04em] text-apple-light mb-2">
                   {stat.value}
@@ -106,22 +102,8 @@ export default function Home() {
                 We know the tech inside and out, and we understand how your business actually runs. That combination is rare.
               </p>
               <div className="space-y-5">
-                {[
-                  'Reduce manual work by up to 80%',
-                  'Scale processes without proportional staff increases',
-                  'Make data-driven decisions with real-time analytics',
-                  'Eliminate errors in repetitive tasks',
-                  'Improve efficiency across departments',
-                  'Work with certified Microsoft Power Platform specialists',
-                ].map((benefit, i) => (
-                  <div key={i} className="flex items-start gap-4">
-                    <div className="w-5 h-5 mt-0.5 rounded-full bg-apple-blue/20 flex items-center justify-center flex-shrink-0">
-                      <svg className="w-3 h-3 text-apple-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3} aria-hidden="true">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
-                    <span className="text-apple-light/80 text-lg">{benefit}</span>
-                  </div>
+                {homeBenefits.map((benefit, i) => (
+                  <CheckItem key={i}>{benefit}</CheckItem>
                 ))}
               </div>
             </div>
@@ -155,12 +137,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              { num: '01', title: 'Discovery & Analysis', desc: 'Map processes, align KPIs.', time: '1-2 weeks' },
-              { num: '02', title: 'Solution Design', desc: 'Design the right Power Platform solution for your needs.', time: '1 week' },
-              { num: '03', title: 'Development & Testing', desc: 'Agile sprints, UAT, and performance benchmarking.', time: '2-8 weeks' },
-              { num: '04', title: 'Deployment & Training', desc: 'Go-live support, hand-over, success metrics dashboard.', time: '1 week' },
-            ].map((step, i) => (
+            {processSteps.map((step, i) => (
               <div key={i} className="bg-[#161617] rounded-2xl p-8 md:p-10 hover:bg-[#1c1c1e] transition-colors flex flex-col">
                 <div className="text-5xl md:text-6xl font-bold gradient-text-blue tracking-[-0.04em] mb-6">
                   {step.num}

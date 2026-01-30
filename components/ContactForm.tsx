@@ -8,6 +8,7 @@ export default function ContactForm() {
   const [company, setCompany] = useState('');
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const [pending, setPending] = useState(false);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -16,7 +17,9 @@ export default function ContactForm() {
     const form = e.currentTarget;
     const honeypot = (form.elements.namedItem('website') as HTMLInputElement)?.value;
     if (honeypot) return;
+    if (pending) return;
 
+    setPending(true);
     setStatus('submitting');
     try {
       const res = await fetch('https://formspree.io/f/mldlpgka', {
@@ -35,6 +38,8 @@ export default function ContactForm() {
       }
     } catch {
       setStatus('error');
+    } finally {
+      setPending(false);
     }
   }
 
@@ -114,7 +119,7 @@ export default function ContactForm() {
         <p className="text-red-400 text-sm">Something went wrong, please try again.</p>
       )}
 
-      <button type="submit" disabled={status === 'submitting'} className="pill-button pill-button-primary disabled:opacity-50">
+      <button type="submit" disabled={pending} className="pill-button pill-button-primary disabled:opacity-50">
         {status === 'submitting' ? 'Sending...' : 'Send message'}
         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
           <path strokeLinecap="round" strokeLinejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />

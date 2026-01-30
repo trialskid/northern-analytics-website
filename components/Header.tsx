@@ -81,6 +81,7 @@ export default function Header() {
                 className={`text-sm font-normal transition-colors ${
                   pathname === item.href ? 'text-white' : 'text-apple-gray hover:text-white'
                 }`}
+                {...(pathname === item.href ? { 'aria-current': 'page' as const } : {})}
               >
                 {item.name}
               </Link>
@@ -125,6 +126,7 @@ export default function Header() {
                 className={`block px-3 py-2 text-sm transition-colors ${
                   pathname === item.href ? 'text-white' : 'text-apple-gray hover:text-white'
                 }`}
+                {...(pathname === item.href ? { 'aria-current': 'page' as const } : {})}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item.name}
