@@ -3,7 +3,7 @@ export default function Schema() {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     name: 'Northern Analytics',
-    description: 'Microsoft Power Platform consulting services specializing in Power BI, Power Automate, Power Apps, SharePoint, and Excel solutions.',
+    description: 'Microsoft Power Platform consulting. Power BI dashboards, Power Automate workflows, Power Apps, SharePoint, and Excel solutions for businesses across Alberta.',
     url: 'https://northern-analytics.com',
     email: 'contact@northern-analytics.com',
     address: {

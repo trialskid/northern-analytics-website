@@ -122,10 +122,10 @@ export default function About() {
           <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-start">
             <div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-apple-light tracking-[-0.02em] mb-6 leading-[1.1]">
-                Deep Microsoft Power Platform expertise.
+                I know the Microsoft Power Platform inside out.
               </h2>
               <p className="text-xl text-apple-gray mb-10 font-light leading-relaxed">
-                I have worked with every part of the Microsoft Power Platform. The solutions I build are solid, follow Microsoft recommended patterns, and hold up when you need to change something.
+                I have worked with every part of the Power Platform. The solutions I build are solid, follow Microsoft recommended patterns, and hold up when you need to change something down the road.
               </p>
               <div className="space-y-4">
                 {expertiseItems.map((item, i) => (

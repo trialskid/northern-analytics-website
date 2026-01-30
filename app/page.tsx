@@ -112,7 +112,7 @@ export default function Home() {
               What I build.
             </h2>
             <p className="text-xl text-apple-gray max-w-xl mx-auto font-light">
-              Power Platform solutions that grow with you.
+              Power Platform solutions for real problems.
             </p>
           </div>
 

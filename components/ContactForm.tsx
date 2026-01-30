@@ -50,7 +50,7 @@ export default function ContactForm() {
           <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
         <h3 className="text-xl font-semibold text-apple-light mb-2">Thank you!</h3>
-        <p className="text-apple-gray text-base">We&apos;ve received your message and will get back to you within 24 hours.</p>
+        <p className="text-apple-gray text-base">I got your message and will get back to you within 24 hours.</p>
       </div>
     );
   }
@@ -111,7 +111,7 @@ export default function ContactForm() {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           className="w-full bg-[#161617] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-apple-blue focus:border-transparent transition-all resize-none"
-          placeholder="Tell us about your project or challenge..."
+          placeholder="Tell me about your project or what's not working..."
         />
       </div>
 

@@ -17,7 +17,7 @@ export const services = [
     tagline: 'Low-code Power Apps built in weeks, not months.',
     description: 'Need a field inspection app that works offline at a plant site? A custom tool for tracking equipment maintenance? I build them with Power Apps. They work on phones and tablets, connect to your existing data, and ship in weeks. I have built apps for everything from safety incident tracking to vendor management in Oil and Gas operations.',
     benefits: [
-      'Deploy mobile-ready apps for field crews in weeks',
+      'Ship mobile-ready apps for field crews in weeks',
       'Build offline-capable tools for remote site work',
       'Replace paper forms with digital capture on any device',
       'Integrate with Microsoft 365 and existing databases',
@@ -40,24 +40,24 @@ export const services = [
   },
   {
     title: 'SharePoint Solutions',
-    tagline: 'Modern intranets and document automation. Secure, integrated, end-to-end.',
+    tagline: 'Modern intranets and document automation that actually manage themselves.',
     description: 'Most companies use SharePoint like a network drive with a browser. I build SharePoint sites that actually manage your documents: automated naming conventions, version control, approval workflows for procedures and policies. For Oil and Gas companies, that means permit documents, safety data sheets, and inspection records that organize and route themselves.',
     benefits: [
       'Centralize safety documents, permits, and procedures',
       'Automate document approval and distribution workflows',
       'Build branded intranet portals teams actually use',
-      'Enable secure collaboration with contractors and vendors',
-      'Integrate with Power Automate for end-to-end document flows',
+      'Share documents securely with contractors and vendors',
+      'Integrate with Power Automate for fully automated document flows',
     ],
     icon: 'link',
   },
   {
     title: 'Spreadsheet Engineering',
-    tagline: 'Robust Excel models that scale with your data and governance policies.',
+    tagline: 'Excel models that hold up under real-world use and grow with your data.',
     description: "Your critical spreadsheet shouldn't break when someone looks at it wrong. I build Excel models that are documented, validated, and tough enough for real-world use. Cost estimating workbooks, production tracking templates, financial models. If your team relies on a spreadsheet that only one person understands, that is a risk I can fix.",
     benefits: [
       'Build production tracking and cost estimating models',
-      'Implement data validation so bad inputs get caught early',
+      'Add data validation so bad inputs get caught early',
       'Create reusable templates for field and office use',
       'Document formulas and business logic so anyone can maintain it',
       'Connect Excel to Power BI for automated reporting',
@@ -72,8 +72,8 @@ export const services = [
       'Connect legacy field systems to modern platforms',
       'Migrate data with zero loss and full validation',
       'Build automated data pipelines between operational systems',
-      'Ensure data quality and consistency across platforms',
-      'Eliminate manual data transfers between systems',
+      'Keep data clean and consistent across platforms',
+      'Get rid of manual data transfers between systems',
     ],
     icon: 'arrows',
   },
@@ -104,9 +104,9 @@ export const processSteps = [
 // Home page benefits
 export const homeBenefits = [
   'Reduce manual work by up to 80%',
-  'Scale processes without proportional staff increases',
-  'Get real-time analytics instead of stale weekly reports',
-  'Eliminate errors in repetitive tasks',
+  'Scale processes without hiring proportionally',
+  'Get live analytics instead of stale weekly reports',
+  'Kill errors in repetitive tasks',
   'PL-300 certified Power BI Data Analyst',
   'Built in Oil and Gas, ready for any industry',
 ];
@@ -115,15 +115,15 @@ export const homeBenefits = [
 export const values = [
   { title: 'Results First', desc: "If it doesn't save you time or money, I haven't done my job." },
   { title: 'Business First', desc: 'I start with your problem, not the technology. The tech is just how I solve it.' },
-  { title: 'No Wasted Time', desc: 'Every solution I build is designed to get rid of wasted time. Yours and your team\'s.' },
-  { title: 'Independence', desc: 'I teach your team to run things without me. The goal is independence, not dependency.' },
+  { title: 'No Wasted Time', desc: 'Every solution I build is meant to kill wasted time. Yours and your team\'s.' },
+  { title: 'Independence', desc: 'I teach your team to run things without me. You should not need me after the project is done.' },
 ];
 
 // About page journey milestones
 export const milestones = [
   { year: '2020', title: 'Started in Power Platform', desc: 'Began specializing in Microsoft Power Platform working at Oil and Gas facilities in Fort McMurray.' },
   { year: '2020-2025', title: '100+ Projects Delivered', desc: 'Built automation and analytics solutions across Oil and Gas operations and enterprise settings.' },
-  { year: '2025', title: 'Founded Northern Analytics', desc: 'Launched to bring enterprise-grade automation and BI to businesses of any size. Got PL-300 certified along the way.' },
+  { year: '2025', title: 'Founded Northern Analytics', desc: 'Started the business to bring proper automation and BI to companies of any size. Got PL-300 certified along the way.' },
 ];
 
 // About page expertise list
