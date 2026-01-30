@@ -1,7 +1,7 @@
 ---
 title: "What is Dataverse and why should you care?"
 description: "Dataverse explained in plain language. Why it matters for businesses using Power Platform, how it compares to SharePoint lists and Excel, and real examples from Oil and Gas."
-date: "2025-10-01"
+date: "2025-09-29"
 tags: ["dataverse", "power-platform", "data", "oil-and-gas"]
 ---
 

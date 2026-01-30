@@ -1,7 +1,7 @@
 ---
 title: "5 Power Automate flows that save hours every week"
 description: "Real automation examples I've built for Oil and Gas companies and other businesses in Fort McMurray. These five Power Automate flows consistently save teams 10 to 20 hours a week."
-date: "2025-09-15"
+date: "2025-09-08"
 tags: ["power-automate", "automation", "oil-and-gas", "productivity"]
 ---
 
