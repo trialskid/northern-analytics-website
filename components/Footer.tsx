@@ -24,6 +24,10 @@ export default function Footer() {
           <a href="mailto:contact@northern-analytics.com" className="hover:text-white transition-colors">
             contact@northern-analytics.com
           </a>
+          <span className="text-white/[0.08]">|</span>
+          <a href="https://www.linkedin.com/company/northern-analytics-ca/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+            LinkedIn
+          </a>
         </div>
 
         {/* Bottom */}

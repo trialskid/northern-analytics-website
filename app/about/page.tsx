@@ -6,7 +6,8 @@ import { aboutStats, milestones, values, expertiseItems } from '@/lib/data';
 
 export const metadata: Metadata = {
   title: 'About Jamey Gulley - PL-300 Certified Power BI Consultant',
-  description: 'Jamey Gulley is a PL-300 certified Power BI Data Analyst and Microsoft Power Platform consultant based in Fort McMurray, Alberta. From Oil and Gas operations to founding Northern Analytics.',
+  description: 'Jamey Gulley is a PL-300 certified Power BI Data Analyst and Microsoft Power Platform consultant based in Fort McMurray, Alberta. Serving clients across Canada, from Edmonton and Calgary to Toronto and Vancouver.',
+  keywords: ['Jamey Gulley', 'Power BI consultant Canada', 'PL-300 certified', 'Northern Analytics', 'Microsoft Power Platform Alberta'],
 };
 
 export default function About() {
@@ -143,6 +144,9 @@ export default function About() {
               <p className="text-apple-gray/70 text-base leading-relaxed">
                 I know Northern Alberta inside and out, and I work with clients across Canada. I understand the industries and real-world conditions your solutions need to work in. That context matters.
               </p>
+              <a href="https://www.linkedin.com/company/northern-analytics-ca/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-apple-blue hover:text-blue-400 transition-colors text-base font-medium mt-2">
+                Connect on LinkedIn &rarr;
+              </a>
             </div>
           </div>
         </div>

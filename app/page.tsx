@@ -6,7 +6,8 @@ import CheckItem from '@/components/CheckItem';
 
 export const metadata: Metadata = {
   title: 'Northern Analytics | Power BI, Power Automate & Power Apps Consulting in Canada',
-  description: 'I build Power BI dashboards, Power Automate workflows, and custom Power Apps for Oil and Gas companies and beyond. Based in Fort McMurray, serving clients across Canada. PL-300 certified.',
+  description: 'Power BI dashboards, Power Automate workflows, and custom Power Apps for businesses across Canada. Based in Fort McMurray, serving Edmonton, Calgary, Toronto, Vancouver and beyond. PL-300 certified.',
+  keywords: ['Power BI Canada', 'Power Automate Canada', 'Power Apps consulting', 'business intelligence Canada', 'Edmonton Power BI', 'Calgary Power BI', 'Toronto Power BI', 'Vancouver Power BI', 'Oil and Gas analytics'],
 };
 
 export default function Home() {

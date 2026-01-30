@@ -6,7 +6,8 @@ import CheckItem from '@/components/CheckItem';
 
 export const metadata: Metadata = {
   title: 'Services - Power BI, Power Automate, Power Apps for Oil & Gas and Beyond',
-  description: 'Process automation, custom apps, business intelligence, SharePoint, and data integration. Built for Oil and Gas operations. PL-300 certified Power BI consultant.',
+  description: 'Process automation, custom apps, business intelligence, SharePoint, and data integration for clients across Canada. Built for Oil and Gas and beyond. PL-300 certified Power BI consultant serving Edmonton, Calgary, Toronto, and Vancouver.',
+  keywords: ['Power BI services Canada', 'Power Automate consulting', 'Power Apps development Canada', 'SharePoint solutions', 'business intelligence Edmonton Calgary'],
 };
 
 export default function Services() {

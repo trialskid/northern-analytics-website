@@ -79,6 +79,8 @@ Every dashboard that survives past the first quarter has at least one person who
 
 This doesn't happen by accident. You need to identify that person early, make sure the dashboard solves their specific pain point first, and give them a reason to show it off. When the area manager starts sharing screenshots from the Power BI mobile app in the group chat, you've won.
 
+*Want help building dashboards your team will actually use? [Let's talk about it](/contact).*
+
 ### They connect to what people already use
 
 One of the most underrated parts of the Power Platform in Fort McMurray operations is how well it fits with tools people already have open. Teams, SharePoint, Outlook. If your dashboard lives inside a Teams channel that the crew already checks daily, it gets eyeballs. If it's buried three clicks deep in a Power BI workspace that nobody bookmarked, it doesn't.
