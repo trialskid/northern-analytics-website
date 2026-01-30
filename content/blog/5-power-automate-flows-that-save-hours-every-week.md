@@ -71,6 +71,18 @@ If you look at these flows, they all share the same pattern. Information goes fr
 
 The reason they save so much time is that humans are bad at remembering to do repetitive tasks on schedule. We get busy. We forget. We get pulled into meetings. A flow doesn't get busy or forget. It just runs.
 
+I should mention that these flows also compound. Once the invoice flow is running, the data it produces can feed into the safety reports. The maintenance scheduling flow can trigger PO approval flows when parts need to be ordered. You don't have to build them all at once, but once a few are running, connecting them becomes obvious.
+
+The other thing I've noticed is that people start seeing automation opportunities everywhere once they have one or two flows in place. Someone on the safety team sees the maintenance reminders working and says "can we do that for our training certifications?" The answer is almost always yes, and it usually takes half a day to set up because the pattern is the same.
+
+## What these flows cost to build
+
+People always want to know the cost, so let me be direct. A simple flow like the timesheet reminder can be built and tested in a few hours. The more complex ones like invoice processing with AI Builder take a few days, sometimes a week if the existing process is messy or involves systems that need custom connectors.
+
+The licensing cost for Power Automate depends on what you already have. Most Microsoft 365 Business plans include some Power Automate capability. If you need premium connectors (which you will for things like AI Builder or custom API connections), you'll need a Power Automate Premium license. It's not free, but compare it to hiring someone to manually do the work for 10 hours a week and the math works out quickly.
+
+I'm not going to pretend every automation pays for itself in a month. Some do. The PO approval flow and invoice processing flow tend to show value almost immediately because the time savings are so visible. Others, like equipment maintenance scheduling, pay off more slowly but prevent expensive problems down the line. A missed maintenance event on a piece of heavy equipment in the oil patch can cost tens of thousands of dollars in downtime and repairs. One prevented incident pays for years of licensing.
+
 ## Getting started
 
 If you're reading this and thinking "we have at least three of these problems," you're not alone. Most companies I talk to in Fort McMurray have all five.
