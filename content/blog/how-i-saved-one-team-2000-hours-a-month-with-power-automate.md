@@ -1,7 +1,7 @@
 ---
 title: "How I saved one team 2,000 hours a month with Power Automate"
 description: "A logistics team was drowning in manual data entry and chasing approvals. Here's how I automated their core workflows and gave them 2,000 hours back every month."
-date: "2025-01-20"
+date: "2026-01-20"
 tags: ["power-automate", "case-study", "roi"]
 ---
 

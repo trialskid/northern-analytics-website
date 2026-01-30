@@ -1,7 +1,7 @@
 ---
 title: "Why your Excel reports are costing you more than you think"
 description: "That weekly Excel report isn't free just because nobody's paying for software. Here's what manual reporting actually costs and why Power BI pays for itself fast."
-date: "2024-11-15"
+date: "2025-11-15"
 tags: ["power-bi", "excel", "business-intelligence"]
 ---
 

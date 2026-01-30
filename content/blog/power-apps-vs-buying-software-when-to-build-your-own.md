@@ -1,7 +1,7 @@
 ---
 title: "Power Apps vs. buying software: when to build your own"
 description: "Off-the-shelf software isn't always the answer. Neither is building custom. Here's a practical framework for deciding when Power Apps makes more sense than buying."
-date: "2024-12-03"
+date: "2025-12-03"
 tags: ["power-apps", "custom-apps", "decision-making"]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "5 manual processes you should automate right now"
 description: "You're probably losing 15+ hours a week to tasks a machine could handle in seconds. Here are the five worst offenders and how to fix them with Power Automate."
-date: "2025-01-28"
+date: "2026-01-28"
 tags: ["automation", "power-automate", "productivity"]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "SharePoint isn't just a file dump (here's what you're missing)"
 description: "Most companies use SharePoint like a network drive with a browser. That's about 20% of what it can do. Here's what you're leaving on the table."
-date: "2025-01-06"
+date: "2026-01-06"
 tags: ["sharepoint", "document-management", "automation"]
 ---
 
