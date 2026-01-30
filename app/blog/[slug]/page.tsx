@@ -36,10 +36,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 // Map of slug to related blog slugs and service page links
 const relatedContent: Record<string, { posts: string[]; services: string[] }> = {
   '5-processes-every-business-should-automate': {
-    posts: ['how-we-saved-one-team-2000-hours-a-month-with-power-automate'],
+    posts: ['how-i-saved-one-team-2000-hours-a-month-with-power-automate'],
     services: ['Process Automation'],
   },
-  'how-we-saved-one-team-2000-hours-a-month-with-power-automate': {
+  'how-i-saved-one-team-2000-hours-a-month-with-power-automate': {
     posts: ['5-processes-every-business-should-automate', 'why-your-excel-reports-are-costing-you-more-than-you-think'],
     services: ['Process Automation', 'Business Intelligence'],
   },
@@ -56,7 +56,7 @@ const relatedContent: Record<string, { posts: string[]; services: string[] }> = 
     services: ['SharePoint Solutions'],
   },
   'why-your-excel-reports-are-costing-you-more-than-you-think': {
-    posts: ['power-bi-dashboards-that-actually-get-used-lessons-from-the-oil-patch', 'how-we-saved-one-team-2000-hours-a-month-with-power-automate'],
+    posts: ['power-bi-dashboards-that-actually-get-used-lessons-from-the-oil-patch', 'how-i-saved-one-team-2000-hours-a-month-with-power-automate'],
     services: ['Business Intelligence', 'Spreadsheet Engineering'],
   },
 };

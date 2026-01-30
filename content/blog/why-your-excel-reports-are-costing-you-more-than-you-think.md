@@ -27,7 +27,7 @@ When your reports are built by hand, every version is a fresh opportunity to get
 
 ## What Power BI actually changes
 
-Power BI connects directly to your data sources. SQL databases, SharePoint lists, Dynamics 365, even Excel files if you're transitioning gradually. The data refreshes automatically on a schedule you set.
+Power BI connects directly to your data sources. SQL databases, SharePoint lists, Dynamics 365, even Excel files if you're transitioning gradually. The data [refreshes automatically](/blog/5-processes-every-business-should-automate) on a schedule you set.
 
 That means your reports are always current, always consistent, and always built the same way. No human in the loop means no human error in the numbers.
 
@@ -35,7 +35,7 @@ Here's what typically happens when a team moves from Excel reporting to Power BI
 
 - Report creation time drops 70 to 90 percent. What took 6 hours now takes 30 minutes of maintenance per week, if that.
 - Data accuracy goes up right away. One source of truth, one set of calculations, no copy-paste.
-- People actually use the reports. Interactive dashboards are more useful than static PDFs. People explore the data instead of just glancing at a summary.
+- People actually use the reports. [Interactive dashboards](/blog/power-bi-dashboards-that-actually-get-used-lessons-from-the-oil-patch) are more useful than static PDFs. People explore the data instead of just glancing at a summary.
 - Leadership gets answers faster. Instead of waiting until Friday, they open a dashboard whenever they want.
 
 ## "But my team knows Excel"
@@ -48,4 +48,4 @@ The bigger shift is cultural. You're moving from "someone builds a report" to "t
 
 Don't try to migrate every report at once. Pick the one that takes the most time or causes the most pain. Build it in Power BI. Let people use both versions for a couple of weeks. The Excel version will stop getting opened pretty fast.
 
-We've done this transition with a lot of teams. The typical payback period is under three months. If you're curious what your reporting actually costs, we'll run the numbers with you. It's usually more than people expect.
+I've done this transition with a lot of teams. The typical payback period is under three months. If you're curious what your reporting actually costs, [I'll run the numbers with you](/contact). It's usually more than people expect.

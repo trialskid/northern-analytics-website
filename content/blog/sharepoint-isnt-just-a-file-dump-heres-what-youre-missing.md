@@ -29,7 +29,7 @@ Setting up metadata columns takes a few hours. The return is permanent. Every do
 
 ## Automate the boring parts
 
-This is where SharePoint starts earning real money. When you combine document libraries with Power Automate, things get interesting fast.
+This is where SharePoint starts earning real money. When you combine document libraries with [Power Automate](/blog/5-processes-every-business-should-automate), things get interesting fast.
 
 Here are workflows I've built for clients that run every single day without anyone thinking about them:
 
@@ -44,7 +44,7 @@ None of these are complex. Each one takes a day or two to set up. But they elimi
 
 SharePoint lists are basically lightweight databases that anyone can build. I've seen teams replace entire tracking spreadsheets with SharePoint lists that multiple people can edit simultaneously, with version history, permissions, and automated notifications built in.
 
-Project trackers, issue logs, asset inventories, training records. If you're managing it in Excel and more than one person touches it, a SharePoint list is probably the better option.
+Project trackers, issue logs, asset inventories, training records. If you're managing it in [Excel](/blog/why-your-excel-reports-are-costing-you-more-than-you-think) and more than one person touches it, a SharePoint list is probably the better option.
 
 ## Start with one library
 
@@ -52,4 +52,4 @@ You don't need to restructure your entire SharePoint environment overnight. Pick
 
 The reaction is usually something like, "Why didn't we do this three years ago?" And from there, the rest of the organization starts asking for the same treatment.
 
-If you want help figuring out where to start, we do this all the time. We'll look at your SharePoint setup, find the quick wins, and build them out. Most companies see results inside of two weeks.
+If you want help figuring out where to start, [I do this all the time](/services). I'll look at your SharePoint setup, find the quick wins, and build them out. Most companies see results inside of two weeks.

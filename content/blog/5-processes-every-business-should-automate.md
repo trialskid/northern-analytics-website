@@ -31,7 +31,7 @@ Depending on volume, this saves 3 to 8 hours per week.
 
 Every Friday afternoon, someone pulls data from three different sources, drops it into Excel, formats it, and emails it to ten people. They've been doing this for two years and they hate it.
 
-Power BI handles the visualization. Power Automate handles the scheduling. The report builds itself and lands in the right inboxes on time. The person who used to build it can now do something that actually requires a brain.
+[Power BI](/blog/power-bi-dashboards-that-actually-get-used-lessons-from-the-oil-patch) handles the visualization. Power Automate handles the scheduling. The report builds itself and lands in the right inboxes on time. The person who used to build it can now do something that actually requires a brain.
 
 That's 4 to 10 hours per reporting cycle, depending on complexity.
 
@@ -61,4 +61,4 @@ And that's just the time savings. Fewer errors, faster turnaround, and people wh
 
 Don't try to automate everything at once. Pick the process that causes the most pain, build a solution, measure what changes, and go from there.
 
-That's how we work at Northern Analytics. We start with discovery, figure out where the biggest wins are, and ship working solutions in weeks. If you're curious what that looks like for your team, book a free 30-minute call and we'll walk through it together.
+That's how I work at Northern Analytics. I start with [discovery](/process), figure out where the biggest wins are, and ship working solutions in weeks. If you're curious what that looks like for your team, [book a free 30-minute call](/contact) and I'll walk through it with you.

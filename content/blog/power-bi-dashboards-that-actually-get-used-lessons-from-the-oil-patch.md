@@ -95,7 +95,7 @@ Let me get specific about what works in Oil & Gas, because the details matter.
 
 **Equipment uptime tracking** is where Power BI starts paying for itself in obvious, dollar-figure terms. When you can see that a specific pump has gone down four times in the past month, or that a compressor at one site has 30% more downtime than the same model at another site, you're not just reporting anymore. You're preventing the next failure. Maintenance teams love this stuff once they trust the data.
 
-**Crew scheduling visibility** is a sneaky one. It doesn't sound exciting, but in a fly-in/fly-out operation, knowing who's on rotation, who's coming off days, and where the gaps are next week is genuinely useful. A simple Power BI page connected to a SharePoint list (or even a well-structured Excel file on OneDrive) can replace a whiteboard that only exists in one office trailer.
+**Crew scheduling visibility** is a sneaky one. It doesn't sound exciting, but in a fly-in/fly-out operation, knowing who's on rotation, who's coming off days, and where the gaps are next week is genuinely useful. A simple Power BI page connected to a [SharePoint list](/blog/sharepoint-isnt-just-a-file-dump-heres-what-youre-missing) (or even a well-structured [Excel file](/blog/why-your-excel-reports-are-costing-you-more-than-you-think) on OneDrive) can replace a whiteboard that only exists in one office trailer.
 
 ## The uncomfortable truth about dashboard adoption
 
@@ -113,4 +113,4 @@ Get it on their phone. Make sure the data is fresh. Keep it simple enough that t
 
 Do that well, and something interesting happens. They start showing other people. Those people want their own version. Suddenly you have pull instead of push, and that's when Power BI stops being a reporting tool and starts being part of how your operation actually runs.
 
-That's the goal. Not a pretty dashboard. A useful one.
+That's the goal. Not a pretty dashboard. A useful one. If you want help building dashboards your team will actually use, [let's talk](/contact).

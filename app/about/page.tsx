@@ -138,10 +138,10 @@ export default function About() {
                 Based in Fort McMurray
               </h3>
               <p className="text-apple-gray text-lg leading-relaxed mb-6">
-                I work with businesses in Fort McMurray, Edmonton, Calgary, and across Alberta. Remote or on-site, whatever works.
+                I work with businesses in Fort McMurray, Edmonton, Calgary, and across Canada. Remote or on-site, whatever works.
               </p>
               <p className="text-apple-gray/70 text-base leading-relaxed">
-                I know Northern Alberta. I know the industries up here and the real-world conditions your solutions need to work in. That context matters.
+                I know Northern Alberta inside and out, and I work with clients across Canada. I understand the industries and real-world conditions your solutions need to work in. That context matters.
               </p>
             </div>
           </div>

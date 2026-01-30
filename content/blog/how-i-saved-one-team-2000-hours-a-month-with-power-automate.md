@@ -1,17 +1,17 @@
 ---
-title: "How we saved one team 2,000 hours a month with Power Automate"
-description: "A logistics team was drowning in manual data entry and chasing approvals. Here's how we automated their core workflows and gave them 2,000 hours back every month."
+title: "How I saved one team 2,000 hours a month with Power Automate"
+description: "A logistics team was drowning in manual data entry and chasing approvals. Here's how I automated their core workflows and gave them 2,000 hours back every month."
 date: "2025-01-20"
 tags: ["power-automate", "case-study", "roi"]
 ---
 
-I want to walk you through a real project because the numbers on this one still surprise me. A logistics coordination team of about 45 people was spending the majority of their day on manual work that had no business being manual. We automated the worst of it and the results were hard to argue with.
+I want to walk you through a real project because the numbers on this one still surprise me. A logistics coordination team of about 45 people was spending the majority of their day on manual work that had no business being manual. I automated the worst of it and the results were hard to argue with.
 
 ## The situation
 
 This team handles inbound shipment coordination for a mid-size distribution company. Every day, they process between 200 and 300 shipment notifications from vendors. Each notification triggers a chain of tasks: verify the shipment details against the purchase order, update the warehouse management system, notify the receiving dock, schedule labor, and confirm receipt back to the vendor.
 
-Before we got involved, almost all of that was done by hand. Someone would read an email from a vendor, open the warehouse system, type in the details, send a Teams message to the dock supervisor, update a shared Excel tracker, and email the vendor back. Per shipment, that process took about 12 minutes on a good day. On a bad day, when information was missing or something didn't match, it could take 30 minutes.
+Before I got involved, almost all of that was done by hand. Someone would read an email from a vendor, open the warehouse system, type in the details, send a Teams message to the dock supervisor, update a shared [Excel tracker](/blog/why-your-excel-reports-are-costing-you-more-than-you-think), and email the vendor back. Per shipment, that process took about 12 minutes on a good day. On a bad day, when information was missing or something didn't match, it could take 30 minutes.
 
 At 250 shipments per day and an average of 15 minutes each, the team was burning roughly 62 hours a day just on shipment processing. That's about 1,300 hours a month on a single workflow.
 
@@ -19,17 +19,17 @@ And that wasn't their only manual process. Approval routing for exceptions, week
 
 Total: roughly 2,000 hours a month spent on tasks that followed the same steps every time.
 
-## What we built
+## What I built
 
-We broke the project into three phases over eight weeks.
+I broke the project into three phases over eight weeks.
 
-**Phase 1: Shipment intake automation.** We built a Power Automate flow that reads inbound shipment emails, extracts the key data using AI Builder, and matches it against open purchase orders in their ERP system. If everything lines up, the flow updates the warehouse system, notifies the dock team through an adaptive card in Teams, and sends a confirmation to the vendor. No human touch required for clean matches, which accounted for about 75 percent of shipments.
+**Phase 1: Shipment intake automation.** I built a Power Automate flow that reads inbound shipment emails, extracts the key data using AI Builder, and matches it against open purchase orders in their ERP system. If everything lines up, the flow updates the warehouse system, notifies the dock team through an adaptive card in Teams, and sends a confirmation to the vendor. No human touch required for clean matches, which accounted for about 75 percent of shipments.
 
 For the remaining 25 percent where something doesn't match, the flow routes it to a coordinator with all the context pre-loaded. Instead of starting from scratch, they're reviewing a flagged exception with the relevant data already pulled up. What used to take 15 to 30 minutes now takes 3.
 
-**Phase 2: Exception handling and approvals.** Shipments that exceed certain thresholds or deviate from the PO need manager approval. We replaced the email chain with a structured approval flow in Power Automate. The manager gets an adaptive card with the shipment details, the discrepancy, and one-tap approve or reject. Escalation happens automatically if they don't respond within two hours.
+**Phase 2: Exception handling and approvals.** Shipments that exceed certain thresholds or deviate from the PO need manager approval. I replaced the email chain with a structured approval flow in Power Automate. The manager gets an adaptive card with the shipment details, the discrepancy, and one-tap approve or reject. Escalation happens automatically if they don't respond within two hours.
 
-**Phase 3: Reporting and vendor follow-ups.** The weekly report that someone spent four hours building every Friday now generates automatically from the data already flowing through the system. Vendor follow-ups for missing information go out automatically after 24 hours with no human involvement.
+**Phase 3: Reporting and vendor follow-ups.** The weekly report that someone spent four hours building every Friday now [generates automatically](/blog/5-processes-every-business-should-automate) from the data already flowing through the system. Vendor follow-ups for missing information go out automatically after 24 hours with no human involvement.
 
 ## The results
 
@@ -52,4 +52,4 @@ I don't always get to share numbers this clean, but when the volume is high and 
 
 You don't need a team of 45 to see this kind of return. The principle scales down. If five people each spend two hours a day on repetitive work, that's 200 hours a month. Automating even half of it changes what your team can actually spend their time on.
 
-The first step is always the same: figure out where the hours are going. If you're not sure, we can help with that.
+The first step is always the same: figure out where the hours are going. If you're not sure, [I can help with that](/contact).

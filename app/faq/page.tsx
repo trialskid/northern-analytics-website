@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     question: 'Do you work remotely?',
-    answer: 'Yes. I am based in Fort McMurray, Alberta and work with companies across Alberta and Canada. Most of my work is done remotely. If you need on-site work (for discovery sessions or training, for example), I can do that too, especially for companies in Fort McMurray, Edmonton, and Calgary.',
+    answer: 'Yes. I am based in Fort McMurray, Alberta and work with clients across Canada. Most of my work is done remotely. If you need on-site work (for discovery sessions or training, for example), I can do that too, especially for companies in Fort McMurray, Edmonton, and Calgary.',
   },
   {
     question: 'What industries do you serve?',

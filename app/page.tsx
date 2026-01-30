@@ -5,8 +5,8 @@ import { getServiceIcon, ChevronRight } from '@/components/Icons';
 import CheckItem from '@/components/CheckItem';
 
 export const metadata: Metadata = {
-  title: 'Northern Analytics | Power BI, Power Automate & Power Apps Consulting in Alberta',
-  description: 'I build Power BI dashboards, Power Automate workflows, and custom Power Apps for Oil and Gas companies and beyond. Based in Fort McMurray, serving all of Alberta. PL-300 certified.',
+  title: 'Northern Analytics | Power BI, Power Automate & Power Apps Consulting in Canada',
+  description: 'I build Power BI dashboards, Power Automate workflows, and custom Power Apps for Oil and Gas companies and beyond. Based in Fort McMurray, serving clients across Canada. PL-300 certified.',
 };
 
 export default function Home() {
@@ -217,14 +217,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Serving Alberta */}
+      {/* Serving Canada */}
       <section className="bg-apple-black section-divider py-20 md:py-28">
         <div className="mx-auto max-w-[980px] px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-[-0.03em] text-apple-light mb-6">
-            Serving Alberta.
+            Serving Canada.
           </h2>
           <p className="text-xl text-apple-gray max-w-2xl mx-auto font-light leading-relaxed">
-            Based in Fort McMurray. Working with companies in Edmonton, Calgary, and across Alberta. Remote or on-site, whatever works for your team.
+            Based in Fort McMurray. Working with companies in Edmonton, Calgary, and across Canada. Remote or on-site, coast to coast.
           </p>
         </div>
       </section>
