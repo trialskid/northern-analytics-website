@@ -2,12 +2,12 @@ export const services = [
   {
     title: 'Process Automation',
     tagline: 'Power Automate workflows that cut cycle times by up to 80%.',
-    description: 'Stop doing the same thing over and over. Power Automate connects your systems, handles approvals, and runs processes the same way every time without anyone babysitting them.',
+    description: 'I build Power Automate flows that replace the repetitive stuff your team does every day. Think daily production reports that compile themselves, approval chains that actually move, and data that flows between systems without anyone touching it. One logistics team I worked with was burning 2,000 hours a month on manual data entry. I automated the worst of it and gave them that time back.',
     benefits: [
-      'Reduce manual data entry and file handling',
-      'Automate approval workflows and notifications',
-      'Connect disparate systems seamlessly',
-      'Ensure compliance with automated audit trails',
+      'Automate daily production and safety reporting',
+      'Route approvals through Teams instead of email chains',
+      'Connect field data systems to head office automatically',
+      'Build audit trails that satisfy compliance without extra work',
       'Scale operations without adding headcount',
     ],
     icon: 'bolt',
@@ -15,65 +15,65 @@ export const services = [
   {
     title: 'Custom Applications',
     tagline: 'Low-code Power Apps built in weeks, not months.',
-    description: 'Need an app for your team? We build them with Power Apps. They work on phones, connect to your existing data, and ship in weeks instead of months.',
+    description: 'Need a field inspection app that works offline at a plant site? A custom tool for tracking equipment maintenance? I build them with Power Apps. They work on phones and tablets, connect to your existing data, and ship in weeks. I have built apps for everything from safety incident tracking to vendor management in Oil and Gas operations.',
     benefits: [
-      'Deploy mobile-ready apps in weeks',
-      'Integrate seamlessly with Microsoft 365',
-      'Empower users with intuitive interfaces',
-      'Iterate quickly based on user feedback',
-      'Maintain security and governance standards',
+      'Deploy mobile-ready apps for field crews in weeks',
+      'Build offline-capable tools for remote site work',
+      'Replace paper forms with digital capture on any device',
+      'Integrate with Microsoft 365 and existing databases',
+      'Iterate quickly based on crew and supervisor feedback',
     ],
     icon: 'phone',
   },
   {
     title: 'Business Intelligence',
     tagline: 'Interactive dashboards and automated reporting with Power BI.',
-    description: 'Your data is already telling you something. Power BI turns it into dashboards your team will actually use, reports that send themselves, and answers you can act on.',
+    description: 'Your data is already telling you something. I turn it into dashboards your team will actually open every morning. Production numbers, equipment uptime, cost tracking, safety metrics. I have built Power BI solutions for Oil and Gas operations across northern Alberta, and the ones that stick are the ones built around what your people actually need to see. I am PL-300 certified (Power BI Data Analyst) so the technical foundation is solid.',
     benefits: [
-      'Visualize KPIs in real-time dashboards',
-      'Automate report generation and distribution',
-      'Enable self-service analytics for teams',
-      'Uncover trends and patterns in your data',
-      'Make faster, data-driven decisions',
+      'Build real-time production and operations dashboards',
+      'Automate the weekly reports your team builds by hand',
+      'Give supervisors and execs the numbers they actually care about',
+      'Surface trends in maintenance, safety, and production data',
+      'Replace emailed spreadsheets with live, interactive reports',
     ],
     icon: 'chart',
   },
   {
     title: 'SharePoint Solutions',
     tagline: 'Modern intranets and document automation. Secure, integrated, end-to-end.',
-    description: 'A place for your documents, your team, and your processes. We build SharePoint sites that people actually want to use, not just another portal that collects dust.',
+    description: 'Most companies use SharePoint like a network drive with a browser. I build SharePoint sites that actually manage your documents: automated naming conventions, version control, approval workflows for procedures and policies. For Oil and Gas companies, that means permit documents, safety data sheets, and inspection records that organize and route themselves.',
     benefits: [
-      'Centralize document storage and management',
-      'Enable secure external collaboration',
-      'Automate document workflows and approvals',
-      'Create branded intranet portals',
-      'Integrate with Microsoft 365 ecosystem',
+      'Centralize safety documents, permits, and procedures',
+      'Automate document approval and distribution workflows',
+      'Build branded intranet portals teams actually use',
+      'Enable secure collaboration with contractors and vendors',
+      'Integrate with Power Automate for end-to-end document flows',
     ],
     icon: 'link',
   },
   {
     title: 'Spreadsheet Engineering',
     tagline: 'Robust Excel models that scale with your data and governance policies.',
-    description: "Your critical spreadsheet shouldn't break when someone looks at it wrong. We build Excel models that are documented, validated, and tough enough for real-world use.",
+    description: "Your critical spreadsheet shouldn't break when someone looks at it wrong. I build Excel models that are documented, validated, and tough enough for real-world use. Cost estimating workbooks, production tracking templates, financial models. If your team relies on a spreadsheet that only one person understands, that is a risk I can fix.",
     benefits: [
-      'Build complex financial and operational models',
-      'Implement data validation and error checking',
-      'Create reusable templates and tools',
-      'Document formulas and business logic',
-      'Integrate Excel with Power Platform services',
+      'Build production tracking and cost estimating models',
+      'Implement data validation so bad inputs get caught early',
+      'Create reusable templates for field and office use',
+      'Document formulas and business logic so anyone can maintain it',
+      'Connect Excel to Power BI for automated reporting',
     ],
     icon: 'table',
   },
   {
     title: 'Data Integration & Migration',
     tagline: 'Connect your systems and move old data into platforms that actually work.',
-    description: 'Your systems need to talk to each other. We connect them, move your data where it needs to go, and make sure nothing gets lost along the way.',
+    description: 'Your systems need to talk to each other. I connect them, move your data where it needs to go, and make sure nothing gets lost along the way. Whether you are migrating off a legacy system, connecting field data to your ERP, or building pipelines between operational databases, I have done it before in environments where data accuracy is not optional.',
     benefits: [
-      'Connect legacy systems to modern platforms',
-      'Migrate data with zero loss',
-      'Build automated data pipelines',
-      'Ensure data quality and consistency',
-      'Reduce manual data transfer work',
+      'Connect legacy field systems to modern platforms',
+      'Migrate data with zero loss and full validation',
+      'Build automated data pipelines between operational systems',
+      'Ensure data quality and consistency across platforms',
+      'Eliminate manual data transfers between systems',
     ],
     icon: 'arrows',
   },
@@ -95,40 +95,40 @@ export const aboutStats = [
 
 // Home page process overview
 export const processSteps = [
-  { num: '01', title: 'Discovery & Analysis', desc: 'Map processes, align KPIs.', time: '1-2 weeks' },
-  { num: '02', title: 'Solution Design', desc: 'Design the right Power Platform solution for your needs.', time: '1 week' },
-  { num: '03', title: 'Development & Testing', desc: 'Agile sprints, UAT, and performance benchmarking.', time: '2-8 weeks' },
-  { num: '04', title: 'Deployment & Training', desc: 'Go-live support, hand-over, success metrics dashboard.', time: '1 week' },
+  { num: '01', title: 'Discovery & Analysis', desc: 'I map your processes and figure out where automation hits hardest.', time: '1-2 weeks' },
+  { num: '02', title: 'Solution Design', desc: 'I design the right Power Platform solution for your needs.', time: '1 week' },
+  { num: '03', title: 'Development & Testing', desc: 'Agile sprints, your feedback every step, and real testing before go-live.', time: '2-8 weeks' },
+  { num: '04', title: 'Deployment & Training', desc: 'I ship it, train your team, and stick around until everything runs smooth.', time: '1 week' },
 ];
 
 // Home page benefits
 export const homeBenefits = [
   'Reduce manual work by up to 80%',
   'Scale processes without proportional staff increases',
-  'Make data-driven decisions with real-time analytics',
+  'Get real-time analytics instead of stale weekly reports',
   'Eliminate errors in repetitive tasks',
-  'Improve efficiency across departments',
-  'Work with certified Microsoft Power Platform specialists',
+  'PL-300 certified Power BI Data Analyst',
+  'Built in Oil and Gas, ready for any industry',
 ];
 
 // About page values
 export const values = [
-  { title: 'Results-Driven', desc: "If it doesn't save you time or money, we haven't done our job." },
-  { title: 'Business-First', desc: 'We start with your problem, not the technology. The tech is just how we solve it.' },
-  { title: 'Efficient', desc: 'Every solution we build is designed to get rid of wasted time.' },
-  { title: 'No Hand-Off', desc: 'We teach your team to run things without us. The goal is independence, not dependency.' },
+  { title: 'Results First', desc: "If it doesn't save you time or money, I haven't done my job." },
+  { title: 'Business First', desc: 'I start with your problem, not the technology. The tech is just how I solve it.' },
+  { title: 'No Wasted Time', desc: 'Every solution I build is designed to get rid of wasted time. Yours and your team\'s.' },
+  { title: 'Independence', desc: 'I teach your team to run things without me. The goal is independence, not dependency.' },
 ];
 
 // About page journey milestones
 export const milestones = [
-  { year: '2020', title: 'Started in Power Platform', desc: 'Began specializing in Microsoft Power Platform in Oil & Gas industry.' },
-  { year: '2020-2025', title: '100+ Projects Delivered', desc: 'Helped organizations automate processes and build data-driven solutions.' },
-  { year: '2025', title: 'Founded Northern Analytics', desc: 'Launched to bring enterprise-grade results to businesses of any size.' },
+  { year: '2020', title: 'Started in Power Platform', desc: 'Began specializing in Microsoft Power Platform working at Oil and Gas facilities in Fort McMurray.' },
+  { year: '2020-2025', title: '100+ Projects Delivered', desc: 'Built automation and analytics solutions across Oil and Gas operations and enterprise settings.' },
+  { year: '2025', title: 'Founded Northern Analytics', desc: 'Launched to bring enterprise-grade automation and BI to businesses of any size. Got PL-300 certified along the way.' },
 ];
 
 // About page expertise list
 export const expertiseItems = [
-  'Power BI for business intelligence and analytics',
+  'Power BI for business intelligence and analytics (PL-300 certified)',
   'Power Automate for workflow automation',
   'Power Apps for custom business applications',
   'SharePoint for collaboration and document management',
@@ -145,9 +145,9 @@ export const contactExpectations = [
 
 // Process page "why it works" items
 export const whyItWorks = [
-  { title: 'Goal-Oriented', desc: "We don't build things for the sake of building. Every step ties back to what you're trying to accomplish." },
-  { title: 'Iterative', desc: 'Regular check-ins mean we catch problems early and adjust before they get expensive.' },
-  { title: 'Battle-Tested', desc: "We've done this 100+ times. The process works." },
+  { title: 'Goal-Oriented', desc: "I don't build things for the sake of building. Every step ties back to what you're trying to accomplish." },
+  { title: 'Iterative', desc: 'Regular check-ins mean I catch problems early and adjust before they get expensive.' },
+  { title: 'Battle-Tested', desc: "I've done this 100+ times. The process works." },
 ];
 
 // Navigation links shared between Header and Footer
@@ -155,6 +155,7 @@ export const navigation = [
   { name: 'Services', href: '/services' },
   { name: 'Process', href: '/process' },
   { name: 'About', href: '/about' },
+  { name: 'FAQ', href: '/faq' },
   { name: 'Blog', href: '/blog' },
   { name: 'Contact', href: '/contact' },
 ];

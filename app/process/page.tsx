@@ -5,7 +5,7 @@ import CheckItem from '@/components/CheckItem';
 import { whyItWorks } from '@/lib/data';
 
 export const metadata: Metadata = {
-  title: 'Our Process - 4-Step Power Platform Implementation',
+  title: 'My Process - 4-Step Power Platform Implementation',
   description: 'A proven 4-step methodology for Power Platform implementations: Discovery, Design, Development, and Deployment. From analysis to go-live in weeks, not months.',
 };
 
@@ -15,8 +15,8 @@ export default function Process() {
       number: '01',
       phase: 'Discovery & Analysis',
       duration: '1-2 weeks',
-      description: "We figure out what's broken.",
-      details: "Before we build anything, we need to understand how things work today and where things are falling apart. We talk to your people, map out the processes, and find the spots where automation will make the biggest difference.",
+      description: "I figure out what's broken.",
+      details: "Before I build anything, I need to understand how things work today and where things are falling apart. I talk to your people, map out the processes, and find the spots where automation will make the biggest difference.",
       activities: [
         'Stakeholder interviews and requirements gathering',
         'Current state process mapping and documentation',
@@ -36,8 +36,8 @@ export default function Process() {
       number: '02',
       phase: 'Solution Design',
       duration: '1 week',
-      description: 'We design the fix.',
-      details: 'Now we plan the actual solution. What gets built, how it connects, how it stays secure, and how your team will use it. No over-engineering, just what you need.',
+      description: 'I design the fix.',
+      details: 'Now I plan the actual solution. What gets built, how it connects, how it stays secure, and how your team will use it. No over-engineering, just what you need.',
       activities: [
         'Solution architecture design',
         'Data model and integration planning',
@@ -57,8 +57,8 @@ export default function Process() {
       number: '03',
       phase: 'Development & Testing',
       duration: '2-8 weeks',
-      description: 'We build it and you test it.',
-      details: "We work in short sprints. Build a piece, show it to you, get feedback, adjust, repeat. You're never in the dark about where things stand, and the final product is what you actually asked for.",
+      description: 'I build it and you test it.',
+      details: "I work in short sprints. Build a piece, show it to you, get feedback, adjust, repeat. You are never in the dark about where things stand, and the final product is what you actually asked for.",
       activities: [
         'Iterative development in 1-2 week sprints',
         'Continuous integration and testing',
@@ -78,8 +78,8 @@ export default function Process() {
       number: '04',
       phase: 'Deployment & Training',
       duration: '1 week',
-      description: 'We ship it and train your team.',
-      details: "We put it into production, train your people to use it, and stick around to make sure everything runs smoothly. You get the docs, the know-how, and a dashboard to track how it's performing.",
+      description: 'I ship it and train your team.',
+      details: "I put it into production, train your people to use it, and stick around to make sure everything runs smoothly. You get the docs, the know-how, and a dashboard to track how it is performing.",
       activities: [
         'Production environment deployment',
         'User and administrator training sessions',
@@ -104,10 +104,10 @@ export default function Process() {
       <section className="bg-black text-white pt-32 pb-20 md:pt-44 md:pb-28">
         <div className="mx-auto max-w-[980px] px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl sm:text-6xl md:text-[72px] font-bold leading-[1.05] tracking-[-0.03em] mb-6">
-            Our <span className="gradient-text">process.</span>
+            My <span className="gradient-text">process.</span>
           </h1>
           <p className="text-xl md:text-2xl text-apple-gray max-w-2xl mx-auto leading-relaxed font-light">
-            Four steps from &quot;we need help&quot; to &quot;it&apos;s live and working.&quot; No surprises, no scope creep, no endless timelines.
+            Four steps from &quot;I need help&quot; to &quot;it&apos;s live and working.&quot; No surprises, no scope creep, no endless timelines.
           </p>
         </div>
       </section>
@@ -219,7 +219,7 @@ export default function Process() {
             Got a project in mind? Let&apos;s talk about it.
           </p>
           <Link href="/contact" className="pill-button pill-button-primary">
-            Schedule a consultation
+            Book a free consultation
             <ChevronRight />
           </Link>
         </div>

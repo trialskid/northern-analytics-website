@@ -5,8 +5,8 @@ import { getServiceIcon, ChevronRight } from '@/components/Icons';
 import CheckItem from '@/components/CheckItem';
 
 export const metadata: Metadata = {
-  title: 'Services - Power BI, Power Automate, Power Apps Consulting',
-  description: 'Expert Microsoft Power Platform services: Process Automation, Custom Applications, Business Intelligence, SharePoint Solutions, and Excel Engineering.',
+  title: 'Services - Power BI, Power Automate, Power Apps for Oil & Gas and Beyond',
+  description: 'Process automation, custom apps, business intelligence, SharePoint, and data integration. Built for Oil and Gas operations. PL-300 certified Power BI consultant.',
 };
 
 export default function Services() {
@@ -16,10 +16,10 @@ export default function Services() {
       <section className="bg-black text-white pt-32 pb-20 md:pt-44 md:pb-28">
         <div className="mx-auto max-w-[980px] px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl sm:text-6xl md:text-[72px] font-bold leading-[1.05] tracking-[-0.03em] mb-6">
-            Our <span className="gradient-text">services.</span>
+            What I <span className="gradient-text">build.</span>
           </h1>
           <p className="text-xl md:text-2xl text-apple-gray max-w-2xl mx-auto leading-relaxed font-light">
-            Everything we build runs on the Microsoft Power Platform. Here&apos;s what that looks like in practice.
+            Everything I build runs on the Microsoft Power Platform. Here&apos;s what that looks like in practice.
           </p>
         </div>
       </section>
@@ -45,7 +45,7 @@ export default function Services() {
                     {service.description}
                   </p>
                   <Link href="/contact" className="pill-button pill-button-primary">
-                    Get started
+                    Tell me what needs fixing
                     <ChevronRight />
                   </Link>
                 </div>
@@ -71,13 +71,14 @@ export default function Services() {
       <section className="bg-apple-black section-divider py-28 md:py-40">
         <div className="mx-auto max-w-[980px] px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl sm:text-5xl md:text-[64px] font-bold tracking-[-0.03em] text-apple-light leading-[1.05] mb-6">
-            Ready to <span className="gradient-text">transform</span> your business?
+            Stop reading about it.{' '}
+            <span className="gradient-text">Start doing it.</span>
           </h2>
           <p className="text-xl text-apple-gray max-w-2xl mx-auto font-light leading-relaxed mb-10">
-            Tell us what&apos;s not working. We&apos;ll figure out how to fix it.
+            Tell me what&apos;s not working. I&apos;ll figure out how to fix it.
           </p>
           <Link href="/contact" className="pill-button pill-button-primary">
-            Schedule a consultation
+            Let&apos;s talk
             <ChevronRight />
           </Link>
         </div>

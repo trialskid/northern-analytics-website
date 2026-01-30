@@ -12,7 +12,7 @@ export default function Contact() {
             Get in <span className="gradient-text">touch.</span>
           </h1>
           <p className="text-xl md:text-2xl text-apple-gray max-w-2xl mx-auto leading-relaxed font-light">
-            Book a 30-minute consultation and receive a high-level ROI estimate.
+            Book a 30-minute consultation and get a high-level ROI estimate. No strings attached.
           </p>
         </div>
       </section>
@@ -24,10 +24,10 @@ export default function Contact() {
             {/* Contact Form */}
             <div>
               <h2 className="text-2xl md:text-3xl font-bold text-apple-light tracking-[-0.02em] mb-6">
-                Let&apos;s start a conversation
+                Tell me what&apos;s eating your team&apos;s time
               </h2>
               <p className="text-apple-gray text-lg leading-relaxed mb-10">
-                Tell us what&apos;s eating your team&apos;s time. We&apos;ll get back to you within 24 hours.
+                Describe what&apos;s not working and I&apos;ll get back to you within 24 hours.
               </p>
 
               <ContactForm />

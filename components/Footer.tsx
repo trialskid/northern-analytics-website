@@ -28,7 +28,7 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="py-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 text-xs text-apple-gray/80">
-          <p>Copyright &copy; {currentYear} Northern Analytics. All rights reserved.</p>
+          <p>Copyright &copy; {currentYear} Northern Analytics. PL-300 Certified. Fort McMurray, AB.</p>
           <div className="flex gap-x-5">
             {legal.map((link) => (
               <Link key={link.name} href={link.href} className="hover:text-apple-gray transition-colors">

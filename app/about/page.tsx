@@ -5,8 +5,8 @@ import CheckItem from '@/components/CheckItem';
 import { aboutStats, milestones, values, expertiseItems } from '@/lib/data';
 
 export const metadata: Metadata = {
-  title: 'About - Jamey Gulley & Northern Analytics',
-  description: 'Founded by Jamey Gulley, a business intelligence and automation expert with 5+ years of experience. 100+ projects delivered, saving clients 2,000+ hours monthly.',
+  title: 'About Jamey Gulley - PL-300 Certified Power BI Consultant',
+  description: 'Jamey Gulley is a PL-300 certified Power BI Data Analyst and Microsoft Power Platform consultant based in Fort McMurray, Alberta. From Oil and Gas operations to founding Northern Analytics.',
 };
 
 export default function About() {
@@ -16,7 +16,7 @@ export default function About() {
       <section className="bg-black text-white pt-32 pb-20 md:pt-44 md:pb-28">
         <div className="mx-auto max-w-[980px] px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl sm:text-6xl md:text-[72px] font-bold leading-[1.05] tracking-[-0.03em] mb-6">
-            About <span className="gradient-text">us.</span>
+            About <span className="gradient-text">me.</span>
           </h1>
           <p className="text-xl md:text-2xl text-apple-gray max-w-2xl mx-auto leading-relaxed font-light">
             Big-company results without the big-company price tag.
@@ -28,13 +28,16 @@ export default function About() {
       <section className="bg-apple-black section-divider py-24 md:py-36">
         <div className="mx-auto max-w-[680px] px-4 sm:px-6 lg:px-8">
           <p className="text-xl md:text-2xl text-apple-light/80 leading-relaxed mb-8 font-light">
-            Northern Analytics was started by Jamey Gulley. He has spent over five years building BI and automation solutions in Oil &amp; Gas and enterprise settings.
+            I spent years working at oil and gas facilities in Fort McMurray, Alberta. I saw the same thing everywhere: manual processes that ate up entire days, reports cobbled together by hand in Excel, people chasing approvals through email chains that went nowhere. Hours and hours wasted on stuff that should take minutes.
           </p>
           <p className="text-xl md:text-2xl text-apple-light/80 leading-relaxed mb-8 font-light">
-            Over that time, he shipped 100+ projects on the Microsoft Power Platform, replacing manual busywork with automated workflows. His clients save over 2,000 hours a month combined.
+            So I started fixing things. I built my first Power Automate flow to replace a process that took someone four hours every morning. It ran in about 90 seconds. That was the moment I got hooked. I kept finding more processes to automate, more reports to rebuild in Power BI, more problems to solve. And every time, the reaction was the same: "Why didn't we do this years ago?"
+          </p>
+          <p className="text-xl md:text-2xl text-apple-light/80 leading-relaxed mb-8 font-light">
+            I got my PL-300 certification (Power BI Data Analyst) and kept going. Over 100 projects later, I have automated entire reporting systems, built custom apps for field crews, and helped teams get thousands of hours back every month. The work adds up fast when you stop doing things the hard way.
           </p>
           <p className="text-xl md:text-2xl text-apple-light/80 leading-relaxed font-light">
-            In 2025, he launched Northern Analytics. The idea was simple: smaller businesses deserve the same quality of automation and analytics that big companies get. We build solutions that save time, surface the numbers that matter, and run without needing extra people to maintain.
+            I started Northern Analytics because smaller companies deserve the same quality of automation and analytics that the big operators get. I build solutions that save real time, surface the numbers that actually matter, and run without needing a team to maintain them. That is the whole point.
           </p>
         </div>
       </section>
@@ -61,7 +64,7 @@ export default function About() {
       <section className="bg-apple-black section-divider py-24 md:py-36">
         <div className="mx-auto max-w-[980px] px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-[-0.03em] text-apple-light text-center mb-16 md:mb-24">
-            Our journey.
+            The journey.
           </h2>
 
           <div className="max-w-[680px] mx-auto space-y-0">
@@ -92,7 +95,7 @@ export default function About() {
       <section className="bg-black section-divider py-24 md:py-36">
         <div className="mx-auto max-w-[980px] px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-[-0.03em] text-apple-light text-center mb-16 md:mb-24">
-            What we believe.
+            What I believe.
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -122,7 +125,7 @@ export default function About() {
                 Deep Microsoft Power Platform expertise.
               </h2>
               <p className="text-xl text-apple-gray mb-10 font-light leading-relaxed">
-                We have worked with every part of the Microsoft Power Platform. The solutions we build are solid, follow Microsoft recommended patterns, and hold up when you need to change something.
+                I have worked with every part of the Microsoft Power Platform. The solutions I build are solid, follow Microsoft recommended patterns, and hold up when you need to change something.
               </p>
               <div className="space-y-4">
                 {expertiseItems.map((item, i) => (
@@ -135,10 +138,10 @@ export default function About() {
                 Based in Fort McMurray
               </h3>
               <p className="text-apple-gray text-lg leading-relaxed mb-6">
-                We work with businesses in Fort McMurray, across Alberta, and anywhere in Canada. Remote or on-site, whatever works.
+                I work with businesses in Fort McMurray, Edmonton, Calgary, and across Alberta. Remote or on-site, whatever works.
               </p>
               <p className="text-apple-gray/70 text-base leading-relaxed">
-                We know Northern Alberta. We know the industries up here and the real-world conditions your solutions need to work in. That context matters.
+                I know Northern Alberta. I know the industries up here and the real-world conditions your solutions need to work in. That context matters.
               </p>
             </div>
           </div>
@@ -152,7 +155,7 @@ export default function About() {
             Let&apos;s work <span className="gradient-text">together.</span>
           </h2>
           <p className="text-xl text-apple-gray max-w-2xl mx-auto font-light leading-relaxed mb-10">
-            Ready to transform your business processes with the Microsoft Power Platform?
+            Tell me what&apos;s eating your team&apos;s time. I&apos;ll figure out how to fix it.
           </p>
           <Link href="/contact" className="pill-button pill-button-primary">
             Get in touch

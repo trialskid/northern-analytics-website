@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ChevronRight } from '@/components/Icons';
-import { getAllSlugs, getPostBySlug } from '@/lib/blog';
+import { getAllSlugs, getPostBySlug, getAllPosts } from '@/lib/blog';
 import MDXContent from '@/components/MDXContent';
 import { notFound } from 'next/navigation';
 
@@ -21,20 +21,56 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: post.title,
     description: post.description,
+    authors: [{ name: 'Jamey Gulley' }],
     openGraph: {
       title: post.title,
       description: post.description,
       type: 'article',
       publishedTime: post.date,
+      authors: ['Jamey Gulley'],
       tags: post.tags,
     },
   };
 }
 
+// Map of slug to related blog slugs and service page links
+const relatedContent: Record<string, { posts: string[]; services: string[] }> = {
+  '5-processes-every-business-should-automate': {
+    posts: ['how-we-saved-one-team-2000-hours-a-month-with-power-automate'],
+    services: ['Process Automation'],
+  },
+  'how-we-saved-one-team-2000-hours-a-month-with-power-automate': {
+    posts: ['5-processes-every-business-should-automate', 'why-your-excel-reports-are-costing-you-more-than-you-think'],
+    services: ['Process Automation', 'Business Intelligence'],
+  },
+  'power-apps-vs-buying-software-when-to-build-your-own': {
+    posts: ['5-processes-every-business-should-automate'],
+    services: ['Custom Applications'],
+  },
+  'power-bi-dashboards-that-actually-get-used-lessons-from-the-oil-patch': {
+    posts: ['why-your-excel-reports-are-costing-you-more-than-you-think'],
+    services: ['Business Intelligence'],
+  },
+  'sharepoint-isnt-just-a-file-dump-heres-what-youre-missing': {
+    posts: ['5-processes-every-business-should-automate'],
+    services: ['SharePoint Solutions'],
+  },
+  'why-your-excel-reports-are-costing-you-more-than-you-think': {
+    posts: ['power-bi-dashboards-that-actually-get-used-lessons-from-the-oil-patch', 'how-we-saved-one-team-2000-hours-a-month-with-power-automate'],
+    services: ['Business Intelligence', 'Spreadsheet Engineering'],
+  },
+};
+
 export default async function BlogPost({ params }: Props) {
   const { slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) notFound();
+
+  const allPosts = getAllPosts();
+  const related = relatedContent[slug];
+  const relatedPosts = related
+    ? allPosts.filter((p) => related.posts.includes(p.slug))
+    : [];
 
   return (
     <>
@@ -71,6 +107,10 @@ export default async function BlogPost({ params }: Props) {
             {post.description}
           </p>
 
+          <p className="text-apple-gray/70 text-sm mt-4">
+            By Jamey Gulley
+          </p>
+
           {post.tags.length > 0 && (
             <div className="flex flex-wrap gap-2 mt-6">
               {post.tags.map((tag) => (
@@ -93,17 +133,63 @@ export default async function BlogPost({ params }: Props) {
         </div>
       </section>
 
+      {/* Related Posts & Services */}
+      {related && (relatedPosts.length > 0 || related.services.length > 0) && (
+        <section className="bg-black section-divider py-16 md:py-24">
+          <div className="mx-auto max-w-[680px] px-4 sm:px-6 lg:px-8">
+            {relatedPosts.length > 0 && (
+              <div className="mb-12">
+                <h3 className="text-xl font-semibold text-apple-light mb-6 tracking-[-0.01em]">
+                  Related posts
+                </h3>
+                <div className="space-y-4">
+                  {relatedPosts.map((rp) => (
+                    <Link
+                      key={rp.slug}
+                      href={`/blog/${rp.slug}`}
+                      className="block bg-[#161617] rounded-2xl p-6 hover:bg-[#1c1c1e] transition-colors"
+                    >
+                      <div className="text-apple-light font-medium mb-1">{rp.title}</div>
+                      <div className="text-apple-gray text-sm">{rp.description}</div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {related.services.length > 0 && (
+              <div>
+                <h3 className="text-xl font-semibold text-apple-light mb-6 tracking-[-0.01em]">
+                  Related services
+                </h3>
+                <div className="flex flex-wrap gap-3">
+                  {related.services.map((service) => (
+                    <Link
+                      key={service}
+                      href="/services"
+                      className="text-sm text-apple-blue bg-apple-blue/10 px-4 py-2 rounded-full hover:bg-apple-blue/20 transition-colors"
+                    >
+                      {service}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
+
       {/* CTA */}
       <section className="bg-black section-divider py-20 md:py-28">
         <div className="mx-auto max-w-[680px] px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-apple-light tracking-[-0.02em] mb-4">
-            Ready to automate?
+            Want this kind of result for your team?
           </h2>
           <p className="text-apple-gray text-lg mb-8">
-            Let&apos;s discuss how these strategies can work for your business.
+            Tell me what&apos;s eating your team&apos;s time. I&apos;ll show you what&apos;s possible.
           </p>
           <Link href="/contact" className="pill-button pill-button-primary">
-            Book a consultation
+            Let&apos;s talk
             <ChevronRight />
           </Link>
         </div>
