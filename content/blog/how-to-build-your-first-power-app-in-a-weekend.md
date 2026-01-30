@@ -1,7 +1,7 @@
 ---
 title: "How to build your first Power App in a weekend"
 description: "A practical, beginner-friendly guide to building your first Power App. What to expect, where to start, common mistakes to avoid, and what's actually possible for someone with zero coding experience."
-date: "2025-03-15"
+date: "2025-10-15"
 tags: ["power-apps", "beginner", "no-code", "low-code"]
 ---
 
