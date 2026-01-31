@@ -38,7 +38,7 @@ export default function Blog() {
                 <Link
                   key={post.slug}
                   href={`/blog/${post.slug}`}
-                  className="block bg-[#161617] rounded-2xl p-8 md:p-10 hover:bg-[#1c1c1e] transition-colors group"
+                  className="block bg-card rounded-2xl p-8 md:p-10 hover:bg-card-hover transition-colors group"
                 >
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                     <div className="flex-1">

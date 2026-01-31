@@ -50,7 +50,7 @@ export default function Services() {
                     <ChevronRight />
                   </Link>
                 </div>
-                <div className={`bg-[#161617] rounded-3xl p-10 ${index % 2 === 1 ? 'md:order-1' : ''}`}>
+                <div className={`bg-card rounded-3xl p-10 ${index % 2 === 1 ? 'md:order-1' : ''}`}>
                   <h3 className="text-xl font-semibold text-apple-light mb-6 tracking-[-0.01em]">
                     Key Benefits
                   </h3>

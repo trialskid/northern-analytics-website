@@ -29,37 +29,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       publishedTime: post.date,
       authors: ['Jamey Gulley'],
       tags: post.tags,
+      images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: post.title }],
     },
   };
 }
 
-// Map of slug to related blog slugs and service page links
-const relatedContent: Record<string, { posts: string[]; services: string[] }> = {
-  '5-processes-every-business-should-automate': {
-    posts: ['how-i-saved-one-team-2000-hours-a-month-with-power-automate'],
-    services: ['Process Automation'],
-  },
-  'how-i-saved-one-team-2000-hours-a-month-with-power-automate': {
-    posts: ['5-processes-every-business-should-automate', 'why-your-excel-reports-are-costing-you-more-than-you-think'],
-    services: ['Process Automation', 'Business Intelligence'],
-  },
-  'power-apps-vs-buying-software-when-to-build-your-own': {
-    posts: ['5-processes-every-business-should-automate'],
-    services: ['Custom Applications'],
-  },
-  'power-bi-dashboards-that-actually-get-used-lessons-from-the-oil-patch': {
-    posts: ['why-your-excel-reports-are-costing-you-more-than-you-think'],
-    services: ['Business Intelligence'],
-  },
-  'sharepoint-isnt-just-a-file-dump-heres-what-youre-missing': {
-    posts: ['5-processes-every-business-should-automate'],
-    services: ['SharePoint Solutions'],
-  },
-  'why-your-excel-reports-are-costing-you-more-than-you-think': {
-    posts: ['power-bi-dashboards-that-actually-get-used-lessons-from-the-oil-patch', 'how-i-saved-one-team-2000-hours-a-month-with-power-automate'],
-    services: ['Business Intelligence', 'Spreadsheet Engineering'],
-  },
-};
+import type { BlogPost } from '@/lib/blog';
+
+function getRelatedPosts(currentPost: BlogPost, allPosts: BlogPost[], maxCount = 3): BlogPost[] {
+  return allPosts
+    .filter((p) => p.slug !== currentPost.slug)
+    .map((p) => ({
+      post: p,
+      overlap: p.tags.filter((t) => currentPost.tags.includes(t)).length,
+    }))
+    .filter((p) => p.overlap > 0)
+    .sort((a, b) => b.overlap - a.overlap)
+    .slice(0, maxCount)
+    .map((p) => p.post);
+}
 
 export default async function BlogPost({ params }: Props) {
   const { slug } = await params;
@@ -67,10 +55,7 @@ export default async function BlogPost({ params }: Props) {
   if (!post) notFound();
 
   const allPosts = getAllPosts();
-  const related = relatedContent[slug];
-  const relatedPosts = related
-    ? allPosts.filter((p) => related.posts.includes(p.slug))
-    : [];
+  const relatedPosts = getRelatedPosts(post, allPosts);
 
   return (
     <>
@@ -133,48 +118,27 @@ export default async function BlogPost({ params }: Props) {
         </div>
       </section>
 
-      {/* Related Posts & Services */}
-      {related && (relatedPosts.length > 0 || related.services.length > 0) && (
+      {/* Related Posts */}
+      {relatedPosts.length > 0 && (
         <section className="bg-black section-divider py-16 md:py-24">
           <div className="mx-auto max-w-[680px] px-4 sm:px-6 lg:px-8">
-            {relatedPosts.length > 0 && (
-              <div className="mb-12">
-                <h3 className="text-xl font-semibold text-apple-light mb-6 tracking-[-0.01em]">
-                  Related posts
-                </h3>
-                <div className="space-y-4">
-                  {relatedPosts.map((rp) => (
-                    <Link
-                      key={rp.slug}
-                      href={`/blog/${rp.slug}`}
-                      className="block bg-[#161617] rounded-2xl p-6 hover:bg-[#1c1c1e] transition-colors"
-                    >
-                      <div className="text-apple-light font-medium mb-1">{rp.title}</div>
-                      <div className="text-apple-gray text-sm">{rp.description}</div>
-                    </Link>
-                  ))}
-                </div>
+            <div className="mb-12">
+              <h3 className="text-xl font-semibold text-apple-light mb-6 tracking-[-0.01em]">
+                Related posts
+              </h3>
+              <div className="space-y-4">
+                {relatedPosts.map((rp) => (
+                  <Link
+                    key={rp.slug}
+                    href={`/blog/${rp.slug}`}
+                    className="block bg-card rounded-2xl p-6 hover:bg-card-hover transition-colors"
+                  >
+                    <div className="text-apple-light font-medium mb-1">{rp.title}</div>
+                    <div className="text-apple-gray text-sm">{rp.description}</div>
+                  </Link>
+                ))}
               </div>
-            )}
-
-            {related.services.length > 0 && (
-              <div>
-                <h3 className="text-xl font-semibold text-apple-light mb-6 tracking-[-0.01em]">
-                  Related services
-                </h3>
-                <div className="flex flex-wrap gap-3">
-                  {related.services.map((service) => (
-                    <Link
-                      key={service}
-                      href="/services"
-                      className="text-sm text-apple-blue bg-apple-blue/10 px-4 py-2 rounded-full hover:bg-apple-blue/20 transition-colors"
-                    >
-                      {service}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            )}
+            </div>
           </div>
         </section>
       )}

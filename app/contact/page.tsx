@@ -45,7 +45,7 @@ export default function Contact() {
             </div>
 
             {/* What to expect */}
-            <div className="bg-[#161617] rounded-3xl p-8 md:p-10 h-fit">
+            <div className="bg-card rounded-3xl p-8 md:p-10 h-fit">
               <h3 className="text-xl md:text-2xl font-bold text-apple-light tracking-[-0.02em] mb-6">
                 What to expect
               </h3>

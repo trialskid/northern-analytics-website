@@ -35,9 +35,9 @@ export default async function MDXContent({ content }: { content: string }) {
         [&_ul]:my-6 [&_ul]:space-y-2 [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:marker:text-apple-blue
         [&_ol]:my-6 [&_ol]:space-y-2 [&_ol]:list-decimal [&_ol]:pl-6 [&_ol]:marker:text-apple-blue
         [&_li]:text-apple-light/70 [&_li]:text-lg [&_li]:leading-relaxed
-        [&_pre]:bg-[#161617] [&_pre]:rounded-2xl [&_pre]:p-6 [&_pre]:overflow-x-auto [&_pre]:my-6
+        [&_pre]:bg-card [&_pre]:rounded-2xl [&_pre]:p-6 [&_pre]:overflow-x-auto [&_pre]:my-6
         [&_pre_code]:text-sm [&_pre_code]:text-apple-light/80
-        [&_code]:bg-[#161617] [&_code]:text-apple-blue [&_code]:px-1.5 [&_code]:py-0.5 [&_code]:rounded [&_code]:text-sm
+        [&_code]:bg-card [&_code]:text-apple-blue [&_code]:px-1.5 [&_code]:py-0.5 [&_code]:rounded [&_code]:text-sm
         [&_pre_code]:bg-transparent [&_pre_code]:p-0
         [&_hr]:border-white/[0.08] [&_hr]:my-12"
       dangerouslySetInnerHTML={{ __html: html }}

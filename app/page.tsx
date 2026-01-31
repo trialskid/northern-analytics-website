@@ -5,8 +5,6 @@ import { getServiceIcon, ChevronRight } from '@/components/Icons';
 import CheckItem from '@/components/CheckItem';
 
 export const metadata: Metadata = {
-  title: 'Northern Analytics | Power BI, Power Automate & Power Apps Consulting in Canada',
-  description: 'Power BI dashboards, Power Automate workflows, and custom Power Apps for businesses across Canada. Based in Fort McMurray, serving Edmonton, Calgary, Toronto, Vancouver and beyond. PL-300 certified.',
   keywords: ['Power BI Canada', 'Power Automate Canada', 'Power Apps consulting', 'business intelligence Canada', 'Edmonton Power BI', 'Calgary Power BI', 'Toronto Power BI', 'Vancouver Power BI', 'Oil and Gas analytics'],
 };
 
@@ -74,7 +72,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="bg-[#161617] rounded-2xl p-8 md:p-10 hover:bg-[#1c1c1e] transition-colors text-center">
+            <div className="bg-card rounded-2xl p-8 md:p-10 hover:bg-card-hover transition-colors text-center">
               <div className="text-4xl md:text-5xl font-bold gradient-text-blue tracking-[-0.03em] mb-4">
                 2,000 hrs
               </div>
@@ -83,7 +81,7 @@ export default function Home() {
                 I helped a logistics team save 2,000 hours a month by automating their shipment processing and approval workflows.
               </p>
             </div>
-            <div className="bg-[#161617] rounded-2xl p-8 md:p-10 hover:bg-[#1c1c1e] transition-colors text-center">
+            <div className="bg-card rounded-2xl p-8 md:p-10 hover:bg-card-hover transition-colors text-center">
               <div className="text-4xl md:text-5xl font-bold gradient-text-blue tracking-[-0.03em] mb-4">
                 $90K/mo
               </div>
@@ -92,7 +90,7 @@ export default function Home() {
                 That same project cost under $85,000 to build. It paid for itself in less than a month.
               </p>
             </div>
-            <div className="bg-[#161617] rounded-2xl p-8 md:p-10 hover:bg-[#1c1c1e] transition-colors text-center">
+            <div className="bg-card rounded-2xl p-8 md:p-10 hover:bg-card-hover transition-colors text-center">
               <div className="text-4xl md:text-5xl font-bold gradient-text-blue tracking-[-0.03em] mb-4">
                 80%
               </div>
@@ -121,7 +119,7 @@ export default function Home() {
             {services.map((service, i) => (
               <div
                 key={i}
-                className="bg-[#161617] rounded-2xl p-8 md:p-10 hover:bg-[#1c1c1e] transition-colors flex flex-col"
+                className="bg-card rounded-2xl p-8 md:p-10 hover:bg-card-hover transition-colors flex flex-col"
               >
                 <div className="text-apple-blue mb-5">{getServiceIcon(service.icon)}</div>
                 <h3 className="text-xl md:text-2xl font-semibold text-apple-light mb-3 tracking-[-0.01em]">
@@ -162,7 +160,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-[#161617] rounded-3xl p-10 md:p-12">
+            <div className="bg-card rounded-3xl p-10 md:p-12">
               <h3 className="text-3xl md:text-4xl font-bold text-apple-light tracking-[-0.02em] mb-4">
                 Got a process that&apos;s eating your time?
               </h3>
@@ -192,7 +190,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {processSteps.map((step, i) => (
-              <div key={i} className="bg-[#161617] rounded-2xl p-8 md:p-10 hover:bg-[#1c1c1e] transition-colors flex flex-col">
+              <div key={i} className="bg-card rounded-2xl p-8 md:p-10 hover:bg-card-hover transition-colors flex flex-col">
                 <div className="text-5xl md:text-6xl font-bold gradient-text-blue tracking-[-0.04em] mb-6">
                   {step.num}
                 </div>

@@ -22,7 +22,8 @@ export default function ContactForm() {
     setPending(true);
     setStatus('submitting');
     try {
-      const res = await fetch('https://formspree.io/f/mldlpgka', {
+      const formspreeId = process.env.NEXT_PUBLIC_FORMSPREE_ID || 'mldlpgka';
+      const res = await fetch(`https://formspree.io/f/${formspreeId}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({ name, email, company, message }),
@@ -45,7 +46,7 @@ export default function ContactForm() {
 
   if (status === 'success') {
     return (
-      <div className="rounded-2xl border border-apple-blue/30 bg-apple-blue/10 px-6 py-10 text-center">
+      <div role="status" aria-live="polite" className="rounded-2xl border border-apple-blue/30 bg-apple-blue/10 px-6 py-10 text-center">
         <svg className="w-10 h-10 text-apple-blue mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true">
           <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
@@ -72,7 +73,7 @@ export default function ContactForm() {
           required
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="w-full bg-[#161617] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-apple-blue focus:border-transparent transition-all"
+          className="w-full bg-card border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-apple-blue focus:border-transparent transition-all"
           placeholder="Your name"
         />
       </div>
@@ -85,7 +86,7 @@ export default function ContactForm() {
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full bg-[#161617] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-apple-blue focus:border-transparent transition-all"
+          className="w-full bg-card border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-apple-blue focus:border-transparent transition-all"
           placeholder="you@company.com"
         />
       </div>
@@ -97,7 +98,7 @@ export default function ContactForm() {
           name="company"
           value={company}
           onChange={(e) => setCompany(e.target.value)}
-          className="w-full bg-[#161617] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-apple-blue focus:border-transparent transition-all"
+          className="w-full bg-card border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-apple-blue focus:border-transparent transition-all"
           placeholder="Your company"
         />
       </div>
@@ -110,16 +111,16 @@ export default function ContactForm() {
           rows={5}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          className="w-full bg-[#161617] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-apple-blue focus:border-transparent transition-all resize-none"
+          className="w-full bg-card border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-apple-blue focus:border-transparent transition-all resize-none"
           placeholder="Tell me about your project or what's not working..."
         />
       </div>
 
       {status === 'error' && (
-        <p className="text-red-400 text-sm">Something went wrong, please try again.</p>
+        <p role="alert" aria-live="polite" className="text-red-400 text-sm">Something went wrong, please try again.</p>
       )}
 
-      <button type="submit" disabled={pending} className="pill-button pill-button-primary disabled:opacity-50">
+      <button type="submit" disabled={pending} aria-disabled={pending} className="pill-button pill-button-primary disabled:opacity-50 disabled:cursor-not-allowed">
         {status === 'submitting' ? 'Sending...' : 'Send message'}
         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
           <path strokeLinecap="round" strokeLinejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />

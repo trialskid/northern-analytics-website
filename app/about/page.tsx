@@ -101,7 +101,7 @@ export default function About() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {values.map((value, i) => (
-              <div key={i} className="bg-[#161617] rounded-2xl p-8 md:p-10 hover:bg-[#1c1c1e] transition-colors flex flex-col">
+              <div key={i} className="bg-card rounded-2xl p-8 md:p-10 hover:bg-card-hover transition-colors flex flex-col">
                 <div className="text-3xl md:text-4xl font-bold gradient-text-blue tracking-[-0.03em] mb-4">
                   0{i + 1}
                 </div>
@@ -134,7 +134,7 @@ export default function About() {
                 ))}
               </div>
             </div>
-            <div className="bg-[#161617] rounded-3xl p-10 md:p-12">
+            <div className="bg-card rounded-3xl p-10 md:p-12">
               <h3 className="text-2xl md:text-3xl font-bold text-apple-light tracking-[-0.02em] mb-4">
                 Based in Fort McMurray
               </h3>

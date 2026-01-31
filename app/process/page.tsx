@@ -193,7 +193,7 @@ export default function Process() {
           </h2>
           <div className="grid md:grid-cols-3 gap-4">
             {whyItWorks.map((item, i) => (
-              <div key={i} className="bg-[#161617] rounded-2xl p-8 md:p-10 hover:bg-[#1c1c1e] transition-colors text-center flex flex-col">
+              <div key={i} className="bg-card rounded-2xl p-8 md:p-10 hover:bg-card-hover transition-colors text-center flex flex-col">
                 <div className="text-4xl md:text-5xl font-bold gradient-text-blue tracking-[-0.03em] mb-5">
                   0{i + 1}
                 </div>
